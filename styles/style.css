@@ -1,3 +1,176 @@
+* {
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
 body {
-    color: red;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+#AboutMe {
+    max-width: 600px;
+    margin: auto;
+}
+
+main {
+    margin-top: 60px;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+main ul {
+    list-style: none;
+}
+
+.navbar {
+    background-color: black;
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    font: 1em;
+    z-index: 1;
+}
+
+.navbar ul {
+    padding: 0;
+}
+
+.navbar li {
+    list-style: none;
+    float: left;
+    margin: 1px 17px;
+}
+
+.navbar a {
+    transition: 0.5s;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover,
+.name-title:hover {
+    color: rgb(185, 25, 0);
+}
+
+.navbar ul {
+    overflow: auto;
+    float: right;
+    margin: 12px auto;
+}
+
+.my-picture {
+    /* border: solid 6px rgb(116, 62, 1); */
+    transition: 0.75s;
+    filter: grayscale(70%);
+    width: 300px;
+    height: 350px;
+}
+
+.my-picture:hover {
+    filter: none;
+    border-radius: 40px 40px 0 0;
+}
+
+.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    width: 300px;
+    margin: auto;
+    transition: 0.75s;
+}
+
+.polaroid:hover {
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.748);
+}
+
+figure {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 0;
+    transition: 0.75s;
+}
+
+.polaroid:hover .container {
+    color: white;
+}
+
+.polaroid:hover .zindex-pic {
+    border-radius: 40px;
+}
+
+.name-title {
+    color: white;
+    float: left;
+    margin: 12px 20px;
+    transition: 0.5s;
+}
+
+#links {
+    text-align: center;
+    position: static;
+}
+
+#links a {
+    color: inherit;
+    transition: 0.75s;
+}
+
+#links a:hover {
+    color: brown;
+}
+
+.socials {
+    background-color: whitesmoke;
+    width: 300px;
+    margin: auto;
+}
+
+.hide {
+    visibility: hidden;
+    margin: 10px;
+}
+
+.show {
+    visibility: visible;
+    margin: 10px;
+}
+
+#ContactMe {
+    margin-top: 25px;
+}
+
+.socials p {
+    margin: 0 auto;
+    /* border: solid; */
+}
+
+.zindex-pic {
+    width: 300px;
+    z-index: -1;
+    position: relative;
+    bottom: 75px;
+    transition: 0.75s;
+}
+
+.polaroid:hover ~ .zindex-pic {
+    border-radius: 40px;
+}
+
+.social-pic {
+    width: 30px;
+    height: 30px;
+    margin: 5px auto;
 }
