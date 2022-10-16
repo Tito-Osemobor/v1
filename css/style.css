@@ -20,8 +20,11 @@ main {
     text-align: center;
 }
 
-main ul {
-    list-style: none;
+.name-title {
+    color: white;
+    float: left;
+    margin: 12px 20px;
+    transition: 0.5s;
 }
 
 .navbar {
@@ -35,7 +38,9 @@ main ul {
 }
 
 .navbar ul {
-    padding: 0;
+    overflow: auto;
+    float: right;
+    margin: 12px auto;
 }
 
 .navbar li {
@@ -58,14 +63,11 @@ main ul {
     color: rgb(185, 25, 0);
 }
 
-.navbar ul {
-    overflow: auto;
-    float: right;
-    margin: 12px auto;
+main ul {
+    list-style: none;
 }
 
 .my-picture {
-    /* border: solid 6px rgb(116, 62, 1); */
     transition: 0.75s;
     filter: grayscale(70%);
     width: 300px;
@@ -109,13 +111,6 @@ figure {
 
 .polaroid:hover .zindex-pic {
     border-radius: 40px;
-}
-
-.name-title {
-    color: white;
-    float: left;
-    margin: 12px 20px;
-    transition: 0.5s;
 }
 
 #links {
