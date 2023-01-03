@@ -513,11 +513,305 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
+.container {
+  width: 100%;
 }
 
-body {
-  background-color: black;
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mr-6 {
+  margin-right: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-3 {
+  height: 0.75rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-teal-200 {
+  --tw-text-opacity: 1;
+  color: rgb(153 246 228 / var(--tw-text-opacity));
+}
+
+.hover\:border-transparent:hover {
+  border-color: transparent;
+}
+
+.hover\:border-teal-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(20 184 166 / var(--tw-border-opacity));
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:inline-block {
+    display: inline-block;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:w-auto {
+    width: auto;
+  }
+
+  .lg\:flex-grow {
+    flex-grow: 1;
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
+  }
 }
