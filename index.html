@@ -14,14 +14,12 @@
         <link rel="stylesheet" href="/public/styles/styles.css" />
         <link rel="stylesheet" href="/public/styles/index.css" />
         <link rel="script" href="/src/index.js" />
-        <link rel="stylesheet" href="/src/main.css" />
+        <link rel="stylesheet" href="/src/styles/main.css" />
     </head>
     <body class="bg-secondary-subtle">
-        <header class="align-items-center px-lg-4 px-md-4 px-sm-2 py-4">
-            <nav
-                class="navbar bg-secondary-subtle d-flex align-items-center p-0 w-100"
-            >
-                <div class="p-0">
+        <!-- <header class="px-lg-4 px-md-4 px-sm-2 py-4"> -->
+            <nav class="navbar d-flex align-items-center px-lg-4 px-md-4 px-sm-2 py-4 w-100 m-0 bg-secondary border border-dark">
+                <div>
                     <img
                         src="/public/assets/navbar-logo.svg"
                         alt=""
@@ -30,8 +28,8 @@
                         class="navbar-logo"
                     />
                 </div>
-                <div class="navbar-links d-flex align-items-center me-4">
-                    <ol class="d-flex align-items-center my-auto">
+                <div class=" d-flex align-items-center">
+                    <ol class="navbar-links d-flex align-items-center my-auto">
                         <li class="d-flex align-items-center">
                             <a href="#About" class="text-decoration-none"
                                 >About</a
@@ -52,19 +50,25 @@
                                 >Contact</a
                             >
                         </li>
-                    </ol>
-                    <div
-                        class="resume-button d-flex align-it border border-dark rounded ms-4 p-2"
-                    >
-                        <a
-                            href="/public/assets/resume.pdf"
-                            class="text-decoration-none"
-                            >Resume</a
+                        <div
+                            class="resume-button d-flex align-it border border-dark rounded ms-4 p-2"
                         >
-                    </div>
+                            <a
+                                href="/public/assets/resume.pdf"
+                                class="text-decoration-none"
+                                target="_blank"
+                                >Resume</a
+                            >
+                        </div>
+                    </ol>
+                </div>
+                <div class="burger">
+                    <div class="line1 rounded"></div>
+                    <div class="line2 rounded"></div>
+                    <div class="line3 rounded"></div>
                 </div>
             </nav>
-        </header>
+        <!-- </header> -->
         <div class="container-fluid"></div>
         <script src="bootstrap.js"></script>
         <script src="/src/index.js"></script>
