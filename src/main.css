@@ -11926,6 +11926,9 @@ textarea.form-control-lg {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .navbar-links {
     position: absolute;
     right: 0px;
@@ -11940,6 +11943,7 @@ textarea.form-control-lg {
     justify-content: center;
     z-index: 9;
     box-shadow: -10px 0px 30px -15px #6c757d;
+    transform: translateX(100%);
   }
   .navlinks {
     display: block;
@@ -11967,5 +11971,8 @@ textarea.form-control-lg {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+  .burger {
+    display: block;
   }
 }
