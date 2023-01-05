@@ -5,6 +5,12 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text",
         -apple-system, system-ui, sans-serif;
@@ -60,12 +66,12 @@
     a {
         font-size: var(--fz-sm);
     }
-
 }
 
 .burger {
     direction: rtl;
-    z-index: 3;
+    display: none;
+    z-index: 10;
 }
 
 .burger div {
@@ -91,12 +97,44 @@
         position: absolute;
         right: 0px;
         height: 100vh;
-        width: min(75vw, 400px);        
+        width: min(75vw, 400px);
         top: 0vh;
         background-color: $warning;
         margin-right: 0;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+        z-index: 9;
+        box-shadow: -10px 0px 30px -15px $warning;
+    }
+
+    .navlinks {
+        display: block;
+        text-align: center;
+    }
+
+    .navlinks {
+        font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+    }
+
+    .listlinks::before {
+        content: "0" counter(item) ".";
+        font-size: var(--fz-sm);
+        margin-bottom: 5px;
+    }
+
+    .navlinks::before {
+        display: none;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .resume-button {
+        padding: 18px 50px;
+        margin-top: 10%;
+        margin-bottom: 0px;
+        width: max-content;
     }
 }
