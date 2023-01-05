@@ -11897,7 +11897,7 @@ textarea.form-control-lg {
 
 .burger {
   direction: rtl;
-  display: none;
+  z-index: 3;
 }
 
 .burger div {
@@ -11922,10 +11922,13 @@ textarea.form-control-lg {
   .navbar-links {
     position: absolute;
     right: 0px;
-    height: 91.9vh;
-    top: 8vh;
-    background-color: #6c757d;
+    height: 100vh;
+    width: min(75vw, 400px);
+    top: 0vh;
+    background-color: #ffc107;
     margin-right: 0;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
   }
 }
