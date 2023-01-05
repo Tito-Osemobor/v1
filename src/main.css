@@ -11932,13 +11932,13 @@ textarea.form-control-lg {
     height: 100vh;
     width: min(75vw, 400px);
     top: 0vh;
-    background-color: #ffc107;
+    background-color: #6c757d;
     margin-right: 0;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     z-index: 9;
-    box-shadow: -10px 0px 30px -15px #ffc107;
+    box-shadow: -10px 0px 30px -15px #6c757d;
   }
   .navlinks {
     display: block;
