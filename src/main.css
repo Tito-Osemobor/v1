@@ -11880,7 +11880,7 @@ textarea.form-control-lg {
   font-size: var(--fz-sm);
   counter-increment: item 1;
 }
-.navbar-links li a::before {
+.navbar-links li .navlinks::before {
   content: "0" counter(item) ".";
   margin-right: 5px;
   color: green;
@@ -11888,8 +11888,11 @@ textarea.form-control-lg {
   text-align: right;
 }
 
+.resume-button {
+  list-style-type: none;
+}
 .resume-button a {
-  font-size: var(--fz-sM);
+  font-size: var(--fz-sm);
 }
 
 .burger {
