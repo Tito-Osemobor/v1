@@ -11910,7 +11910,7 @@ textarea.form-control-lg {
 .burger div {
   height: 3.5px;
   background-color: black;
-  margin: 4px;
+  margin: 4px 0;
 }
 
 .line1 {
@@ -11974,5 +11974,6 @@ textarea.form-control-lg {
   }
   .burger {
     display: block;
+    cursor: pointer;
   }
 }
