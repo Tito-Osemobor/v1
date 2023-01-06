@@ -11935,14 +11935,15 @@ textarea.form-control-lg {
     height: 100vh;
     width: min(75vw, 400px);
     top: 0vh;
-    background-color: #6c757d;
+    background-color: #495057;
     margin-right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: auto;
     z-index: 9;
-    box-shadow: -10px 0px 30px -15px #6c757d;
+    box-shadow: -10px 0px 30px -15px #495057;
     transform: translateX(100%);
     transition: transform 0.2s ease-in;
   }
