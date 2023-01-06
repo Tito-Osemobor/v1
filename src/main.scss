@@ -112,6 +112,7 @@
         z-index: 9;
         box-shadow: -10px 0px 30px -15px $secondary;
         transform: translateX(100%);
+        transition: transform 0.2s ease-in;
     }
 
     .navlinks {
@@ -148,4 +149,7 @@
         display: block;
         cursor: pointer;
     }
+}
+.navbar-links-active {
+    transform: translateX(0);
 }
