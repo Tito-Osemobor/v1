@@ -92,7 +92,7 @@
     width: 19px;
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
@@ -156,13 +156,13 @@
 }
 
 
-// @media screen and (min-width: 768.3px) {
-//     .listlinks, .resume-button {
-//         margin-left: 1.5rem;
-//     }
+@media screen and (min-width: 768.1px) {
+    .listlinks, .resume-button {
+        margin-left: 1.5rem;
+    }
 
-//     .resume-button {
-//         padding: 0.5rem;
-//     }
+    .resume-button {
+        padding: 0.5rem;
+    }
 
-// }
+}
