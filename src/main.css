@@ -11925,7 +11925,7 @@ textarea.form-control-lg {
   width: 19px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   body {
     overflow-x: hidden;
   }
