@@ -39,6 +39,17 @@
         transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #6c757d;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #343a40;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
 .navbar {
     min-height: 8vh;
 }
@@ -116,7 +127,7 @@
         padding: auto;
         z-index: 9;
         box-shadow: -10px 0px 30px -15px $gray-700;
-        transform: translateX(100%);
+        transform: translateX(110%);
         transition: transform 0.2s ease-in;
     }
 
@@ -161,6 +172,9 @@
 }
 .overflow-hidden {
     overflow: hidden;
+}
+.display {
+    display: none;
 }
 .transition {
     transition: transform 0.2s ease-in;
