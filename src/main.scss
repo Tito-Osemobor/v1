@@ -96,7 +96,6 @@
 
 // }
 
-
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -163,15 +162,17 @@
 .overflow-hidden {
     overflow: hidden;
 }
-
+.transition {
+    transition: transform 0.2s ease-in;
+}
 
 @media screen and (max-width: 1700px) {
-    .listlinks, .resume-button {
+    .listlinks,
+    .resume-button {
         margin-left: 1.5rem;
     }
 
     .resume-button {
         padding: 0.5rem;
     }
-
 }

@@ -11987,8 +11987,13 @@ textarea.form-control-lg {
   overflow: hidden;
 }
 
+.transition {
+  transition: transform 0.2s ease-in;
+}
+
 @media screen and (max-width: 1700px) {
-  .listlinks, .resume-button {
+  .listlinks,
+.resume-button {
     margin-left: 1.5rem;
   }
   .resume-button {
