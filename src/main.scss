@@ -179,6 +179,10 @@
 .transition {
     transition: transform 0.2s ease-in;
 }
+.blur {
+    filter: blur(2.5px);
+    transition: filter 0.2s;
+}
 
 // @media screen and (max-width: 1700px) {
 //     .listlinks,

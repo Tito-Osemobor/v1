@@ -12005,3 +12005,8 @@ textarea.form-control-lg {
 .transition {
   transition: transform 0.2s ease-in;
 }
+
+.blur {
+  filter: blur(2.5px);
+  transition: filter 0.2s;
+}
