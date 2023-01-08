@@ -11925,7 +11925,7 @@ textarea.form-control-lg {
   width: 19px;
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
@@ -11983,7 +11983,7 @@ textarea.form-control-lg {
   transform: translateX(0);
 }
 
-@media screen and (min-width: 768.1px) {
+@media screen and (max-width: 1700px) {
   .listlinks, .resume-button {
     margin-left: 1.5rem;
   }
