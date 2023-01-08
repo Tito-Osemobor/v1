@@ -156,8 +156,11 @@
         cursor: pointer;
     }
 }
+
 .navbar-links-active {
     transform: translateX(0);
+}
+.overflow-hidden {
     overflow: hidden;
 }
 

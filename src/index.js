@@ -4,6 +4,7 @@ const navSlide = () => {
 
     burger.addEventListener("click", () => {
         nav.classList.toggle("navbar-links-active");
+        document.body.classList.toggle("overflow-hidden");
     });
 };
 
