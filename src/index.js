@@ -1,42 +1,27 @@
-const burger = document.querySelector(".burger");
-const nav = document.querySelector(".navbar-links");
+const primaryNav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".nav-toggle");
 
 const navSlide = () => {
-    burger.addEventListener("click", () => {
-        burger.classList.toggle("is-active");
-        nav.classList.toggle("navbar-links-active");
-        document.querySelector("main").classList.toggle("blur");
+    navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("is-active");
+        primaryNav.classList.toggle("is-active");
     });
 };
 
-window.addEventListener("click", (event) => {
-    if (!event.target.closest("nav")) {
-        burger.classList.toggle("is-active", false);
-        nav.classList.toggle("navbar-links-active", false);
-        document.querySelector("main").classList.toggle("blur", false);
-        if (nav.classList.contains("transition")) {
-            setTimeout(function () {
-                nav.classList.remove("transition");
-            }, 500);
-        } else {
-            nav.classList.add("transition");
-        }
-    }
-});
+// window.addEventListener("click", (event) => {
+//     if (!event.target.closest("primaryNav")) {
+//         navToggle.classList.toggle("is-active", false);
+//         primaryNav.classList.toggle("is-active", false);
+//         document.querySelector("main").classList.toggle("blur", false);
+//     }
+// });
 
-window.addEventListener("touchstart", (event) => {
-    if (!event.target.closest("nav")) {
-        burger.classList.toggle("is-active", false);
-        nav.classList.toggle("navbar-links-active", false);
-        document.querySelector("main").classList.toggle("blur", false);
-        if (nav.classList.contains("transition")) {
-            setTimeout(function () {
-                nav.classList.remove("transition");
-            }, 500);
-        } else {
-            nav.classList.add("transition");
-        }
-    }
-});
+// window.addEventListener("touchstart", (event) => {
+//     if (!event.target.closest("primaryNav")) {
+//         navToggle.classList.toggle("is-active", false);
+//         primaryNav.classList.remove("is-active", false);
+//         document.querySelector("main").classList.toggle("blur", false);
+//     }
+// });
 
 navSlide();
