@@ -11874,7 +11874,6 @@ textarea.form-control-lg {
 
 body {
   background-color: #343a40;
-  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -11907,9 +11906,11 @@ body {
 }
 
 .primary-navigation {
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-right: 10;
   font-family: var(--font-mono);
   counter-reset: item 0;
 }
@@ -11930,13 +11931,25 @@ body {
 .primary-navigation .resume-link {
   list-style-type: none;
   font-size: var(--fz-sm);
+  padding: 10.5px 14px;
+  border: solid 2px black;
+  border-radius: 6px;
 }
 .primary-navigation .resume-link a {
   text-decoration: none;
   color: black;
 }
 
-@media (max-width: 35em) {
+.resize-animation-stopper * {
+  -webkit-animation: none !important;
+          animation: none !important;
+  transition: none !important;
+}
+
+@media (max-width: 768px) {
+  body.overflow-hidden {
+    overflow: hidden;
+  }
   nav {
     text-align: center;
   }
@@ -11971,7 +11984,7 @@ body {
   }
   .primary-navigation .resume-link {
     padding: 18px 50px;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 0px;
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -12019,6 +12032,10 @@ body {
   }
   .nav-toggle.is-active:after {
     width: 36px;
-    transform: rotate(45deg) translate(-4px, -11px);
+    transform: rotate(45deg) translate(-4px, -11.5px);
+  }
+  main.blur {
+    filter: blur(3px);
+    transition: all 0.2s;
   }
 }
