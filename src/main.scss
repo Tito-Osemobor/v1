@@ -112,7 +112,11 @@ body {
     transition: none !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 781px) {
+    .sidebar {
+        display: none;
+    }
+
     body.overflow-hidden {
         overflow: hidden;
     }
@@ -213,5 +217,44 @@ body {
     main.blur {
         filter: blur(3px);
         transition: all 0.2s;
+    }
+}
+
+@media (min-width: 782px) {
+
+    .sidebar-links {
+        margin: 0 auto;
+        li {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .sidebar-links::after,
+    .right.sidebar::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 90px;
+        margin: 0 auto;
+        background-color: red;
+    }
+
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+    }
+
+    .right.sidebar {
+        padding-right: 32px;
+        right: 0;
+        a {
+            writing-mode: vertical-rl;
+            text-decoration: none;
+            font-family: monospace;
+            list-style-type: none;
+        }
     }
 }

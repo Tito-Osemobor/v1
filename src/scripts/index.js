@@ -10,7 +10,7 @@ const navSlide = () => {
     });
 };
 
-document.addEventListener("click", function (event) {
+window.addEventListener("click", function (event) {
     if (
         !primaryNav.contains(event.target) &&
         !navToggle.contains(event.target)
@@ -22,7 +22,7 @@ document.addEventListener("click", function (event) {
     }
 });
 
-document.addEventListener("touchstart", function (event) {
+window.addEventListener("touchstart", function (event) {
     if (
         !primaryNav.contains(event.target) &&
         !navToggle.contains(event.target)
