@@ -114,7 +114,7 @@ body {
     transition: none !important;
 }
 
-@media (max-width: 781px) {
+@media (max-width: 768px) {
     .sidebar {
         display: none;
     }
@@ -222,7 +222,7 @@ body {
     }
 }
 
-@media (min-width: 782px) {
+@media (min-width: 768px) {
     .sidebar {
         position: fixed;
         bottom: 0;
