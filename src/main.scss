@@ -223,47 +223,65 @@ body {
 }
 
 @media (min-width: 782px) {
-    // .sidebar-links {
-    //     margin: 0 auto;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-items: space-around;
-    //     li {
-    //         list-style-type: none;
-    //         a {
-    //             text-decoration: none;
-    //         }
-    //     }
-    // }
-
     .sidebar {
         position: fixed;
         bottom: 0;
-
+        transition: all 0.2s;
     }
 
     .left.sidebar {
         left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .sidebar-links {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li {
+                margin-bottom: 10px;
+                a .logo {
+                    transform: translateY(0);
+                    transition: all 0.2s ease-in-out;
+                    path {
+                        fill: white;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+                a:hover .logo {
+                    transform: translateY(-5px);
+                    transition: all 0.2s ease-in-out;
+                    path {
+                        fill: red;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+            }
         }
-    }
-
-    .sidebar-logo {
-        margin: 9px;
     }
 
     .right.sidebar {
         right: 0;
-        border: solid 1px red;
-        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         a {
             text-decoration: none;
             color: white;
+            font-size: var(--fz-md);
             font-family: monospace;
             writing-mode: vertical-rl;
+            margin-bottom: 17px;
+            transform: translateY(0px);
+            transition: all 0.2s ease-in-out;
+        }
+        a:hover {
+            color: red;
+            transform: translateY(-5px);
+            transition: all 0.2s ease-in-out;
         }
     }
 
@@ -272,21 +290,7 @@ body {
         content: "";
         display: block;
         width: 1px;
-        height: 90px;
+        height: 100px;
         background-color: white;
-        margin: 0 auto;
     }
-
-
-    // .right.sidebar {
-    //     padding-right: 32px;
-    //     right: 0;
-    //     a {
-    //         color: white;
-    //         writing-mode: vertical-rl;
-    //         text-decoration: none;
-    //         font-family: monospace;
-    //         list-style-type: none;
-    //     }
-    // }
 }
