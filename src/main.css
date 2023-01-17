@@ -12048,7 +12048,7 @@ body {
     transition: all 0.2s;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768.1px) {
   .sidebar {
     position: fixed;
     bottom: 0;
