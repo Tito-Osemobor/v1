@@ -69,7 +69,9 @@ body {
 .primary-header {
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 
 .primary-navigation {
@@ -221,14 +223,47 @@ body {
 }
 
 @media (min-width: 782px) {
+    // .sidebar-links {
+    //     margin: 0 auto;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-items: space-around;
+    //     li {
+    //         list-style-type: none;
+    //         a {
+    //             text-decoration: none;
+    //         }
+    //     }
+    // }
 
-    .sidebar-links {
-        margin: 0 auto;
-        li {
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+
+    }
+
+    .left.sidebar {
+        left: 0;
+        .sidebar-links {
             list-style-type: none;
-            a {
-                text-decoration: none;
-            }
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .sidebar-logo {
+        margin: 9px;
+    }
+
+    .right.sidebar {
+        right: 0;
+        border: solid 1px red;
+        width: auto;
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: monospace;
+            writing-mode: vertical-rl;
         }
     }
 
@@ -238,23 +273,20 @@ body {
         display: block;
         width: 1px;
         height: 90px;
+        background-color: white;
         margin: 0 auto;
-        background-color: red;
     }
 
-    .sidebar {
-        position: fixed;
-        bottom: 0;
-    }
 
-    .right.sidebar {
-        padding-right: 32px;
-        right: 0;
-        a {
-            writing-mode: vertical-rl;
-            text-decoration: none;
-            font-family: monospace;
-            list-style-type: none;
-        }
-    }
+    // .right.sidebar {
+    //     padding-right: 32px;
+    //     right: 0;
+    //     a {
+    //         color: white;
+    //         writing-mode: vertical-rl;
+    //         text-decoration: none;
+    //         font-family: monospace;
+    //         list-style-type: none;
+    //     }
+    // }
 }
