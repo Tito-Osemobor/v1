@@ -11876,10 +11876,6 @@ body {
   background-color: #343a40;
 }
 
-main {
-  padding-top: 20vh;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   background-color: #6c757d;
@@ -11910,7 +11906,7 @@ main {
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: 13.8vh;
+  height: 100px;
 }
 
 .primary-navigation {
@@ -11948,12 +11944,40 @@ main {
   color: black;
 }
 
+main {
+  min-height: 100vh;
+}
+main .intro {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+p {
+  max-width: 540px;
+}
+
 .resize-animation-stopper * {
   -webkit-animation: none !important;
           animation: none !important;
   transition: none !important;
 }
 
+@media (max-width: 492px) {
+  main {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+@media (min-width: 493px) and (max-width: 768px) {
+  main {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -12039,14 +12063,15 @@ main {
     width: 24px;
   }
   .nav-toggle.is-active:before {
-    transform: rotate(-45deg) translate(-3px, 6px);
+    width: 34px;
+    transform: rotate(-230deg) translate(0, -13px);
   }
   .nav-toggle.is-active .bar {
     opacity: 0;
   }
   .nav-toggle.is-active:after {
-    width: 36px;
-    transform: rotate(45deg) translate(-4px, -11.5px);
+    width: 34px;
+    transform: rotate(230deg) translate(0, 15px);
   }
   main.blur {
     filter: blur(3px);
@@ -12121,5 +12146,9 @@ main {
     width: 1px;
     height: 100px;
     background-color: white;
+  }
+  main {
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
