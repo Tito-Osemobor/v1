@@ -11978,6 +11978,10 @@ main .intro div .big-header {
   font-family: var(--font-sans-bold);
   font-weight: 600;
 }
+main .intro div p {
+  font-family: var(--font-sans);
+  font-size: var(--fz-lg);
+}
 
 p {
   max-width: 540px;

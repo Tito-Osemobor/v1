@@ -150,6 +150,10 @@ main {
                 font-family: var(--font-sans-bold);
                 font-weight: 600;
             }
+            p {
+                font-family: var(--font-sans);
+                font-size: var(--fz-lg)
+            }
         }
     }
 }
