@@ -255,17 +255,20 @@
         <main>
             <section class="intro">
                 <div>
-                    <h1>Hi, my name is</h1>
+                    <h2>Hi, my name is</h2>
                 </div>
                 <div>
-                    <h1>Tito Osemobor</h1>
+                    <h1 class="big-header">Tito Osemobor.</h1>
                 </div>
                 <div>
-                    <h1></h1>
+                    <h1 class="big-header text-black-50">
+                        I'm a <span class="typing text-danger"></span>
+                    </h1>
                 </div>
                 <div>
                     <p class="">
-                        I’m a current Computer Science student at Toronto Metropolitan University 
+                        I’m a current Computer Science student at Toronto
+                        Metropolitan University
                     </p>
                 </div>
                 <div></div>
@@ -275,6 +278,15 @@
             <section id="Projects"></section>
             <section id="Contact"></section>
         </main>
+        <script src="/src/scripts/typed.js"></script>
+        <script>
+            var typed = new Typed(".typing", {
+                strings: ["Developer", "Student"],
+                typeSpeed: 60,
+                backSpeed: 60,
+                loop: true,
+            });
+        </script>
         <script src="/src/scripts/bootstrap.js"></script>
         <script src="/src/scripts/index.js"></script>
     </body>

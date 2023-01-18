@@ -1,3 +1,5 @@
+
+
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".nav-toggle");
 
@@ -42,5 +44,9 @@ window.addEventListener("resize", () => {
         document.body.classList.remove("resize-animation-stopper");
     }, 400);
 });
+
+
+
+
 
 navSlide();

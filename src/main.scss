@@ -3,6 +3,24 @@
 
 // Include any default variable overrides here (though functions won't be available)
 @import "../node_modules/bootstrap/scss/bootstrap";
+@font-face {
+    font-family: "Calibre";
+    src: url("/public/fonts/Calibre/Calibre-Regular.ttf") format("truetype"),
+        url("/public/fonts/Calibre/Calibre-Regular.woff") format("woff"),
+        url("/public/fonts/Calibre/Calibre-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Calibre-bold";
+    src: url("/public/fonts/Calibre/Calibre-Semibold.ttf") format("truetype"),
+        url("/public/fonts/Calibre/Calibre-Semibold.woff") format("woff"),
+        url("/public/fonts/Calibre/Calibre-Semibold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "SF Mono";
+    src: url("/public/fonts/SFMono/SFMono-Regular.ttf") format("truetype"),
+        url("/public/fonts/SFMono/SFMono-Regular.woff") format("woff"),
+        url("/public/fonts/SFMono/SFMono-Regular.woff2") format("woff2");
+}
 
 // Then add additional custom code here
 * {
@@ -14,6 +32,7 @@
 :root {
     --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text",
         -apple-system, system-ui, sans-serif;
+    --font-sans-bold: "Calibre-bold";
     --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     --fz-xxs: 12px;
     --fz-xs: 13px;
@@ -120,18 +139,24 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        div {
+            h2 {
+                font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+                font-family: var(--font-mono);
+                margin-bottom: 30px;
+            }
+            .big-header {
+                font-size: clamp(40px, 8vw, 80px);
+                font-family: var(--font-sans-bold);
+                font-weight: 600;
+            }
+        }
     }
 }
 
- p {
+p {
     max-width: 540px;
- }
-
-
-
-
-
-
+}
 
 .resize-animation-stopper * {
     animation: none !important;
@@ -142,6 +167,13 @@ main {
     main {
         padding-right: 25px;
         padding-left: 25px;
+        .intro {
+            div {
+                h2 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 }
 
@@ -244,7 +276,7 @@ main {
     }
     .nav-toggle.is-active:before {
         width: 34px;
-        transform: rotate(-230deg) translate(0, -13px);
+        transform: rotate(-230deg) translate(0, -12px);
     }
     .nav-toggle.is-active .bar {
         opacity: 0;
