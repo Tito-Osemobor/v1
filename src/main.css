@@ -11967,7 +11967,7 @@ main section {
   margin: 0 auto;
 }
 main .intro {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
