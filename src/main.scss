@@ -148,7 +148,7 @@ main {
             h2 {
                 font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
                 font-family: var(--font-mono);
-                margin-bottom: 30px;
+                // margin-top: 30px;
             }
             .big-header {
                 font-size: clamp(50px, 10vw, 100px);
@@ -156,6 +156,7 @@ main {
                 font-weight: 600;
                 padding-bottom: 0;
                 margin-bottom: 0;
+                margin-top: 25px;
             }
             .medium-header {
                 font-size: clamp(30px, 8vw, 75px);
@@ -184,10 +185,10 @@ p {
         padding-right: 25px;
         padding-left: 25px;
         .intro {
-            padding-top: 60px;
+            padding-top: 100px;
             div {
                 h2 {
-                    margin-bottom: 20px;
+                 
                 }
             }
         }
@@ -198,7 +199,6 @@ p {
     main {
         padding-right: 50px;
         padding-left: 50px;
-        background-color: pink;
         .intro {
             padding-top: 100px;
         }
