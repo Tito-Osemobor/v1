@@ -11968,7 +11968,6 @@ main section {
 }
 main .intro {
   min-height: 100vh;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12011,16 +12010,16 @@ p {
     padding-right: 25px;
     padding-left: 25px;
   }
-  main .intro {
-    padding-top: 100px;
-  }
 }
 @media (min-width: 492.1px) and (max-width: 768px) {
   main {
     padding-right: 50px;
     padding-left: 50px;
   }
-  main .intro {
+}
+@media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+  .intro {
+    height: auto;
     padding-top: 100px;
   }
 }

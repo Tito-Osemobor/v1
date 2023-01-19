@@ -140,7 +140,7 @@ main {
     }
     .intro {
         min-height: 100vh;
-        height: auto;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -149,7 +149,6 @@ main {
             h2 {
                 font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
                 font-family: var(--font-mono);
-                // margin-top: 30px;
             }
             .big-header {
                 font-size: clamp(50px, 10vw, 100px);
@@ -168,6 +167,7 @@ main {
                 font-family: var(--font-sans);
                 font-size: var(--fz-lg);
             }
+            
         }
     }
 }
@@ -185,13 +185,6 @@ p {
     main {
         padding-right: 25px;
         padding-left: 25px;
-        .intro {
-            padding-top: 100px;
-            div {
-                h2 {
-                }
-            }
-        }
     }
 }
 
@@ -199,9 +192,13 @@ p {
     main {
         padding-right: 50px;
         padding-left: 50px;
-        .intro {
-            padding-top: 100px;
-        }
+    }
+}
+
+@media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+    .intro {
+        height: auto;
+        padding-top: 100px;
     }
 }
 
