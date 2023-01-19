@@ -144,6 +144,9 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        .first-intro {
+            margin-top: 10px;
+        }
         div {
             h2 {
                 font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
