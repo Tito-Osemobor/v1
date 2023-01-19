@@ -131,17 +131,19 @@ body {
 }
 
 main {
+    max-width: 1600px;
     min-height: 100vh;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin: 0 auto;
+    section {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
     .intro {
-        min-height: 100vh;
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        line-height: 1.3;
         div {
             h2 {
                 font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
@@ -149,13 +151,20 @@ main {
                 margin-bottom: 30px;
             }
             .big-header {
-                font-size: clamp(40px, 8vw, 80px);
+                font-size: clamp(50px, 10vw, 100px);
                 font-family: var(--font-sans-bold);
                 font-weight: 600;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+            .medium-header {
+                font-size: clamp(30px, 8vw, 75px);
+                font-family: var(--font-sans-bold);
+                font-weight: 400;
             }
             p {
                 font-family: var(--font-sans);
-                font-size: var(--fz-lg)
+                font-size: var(--fz-lg);
             }
         }
     }
@@ -175,7 +184,7 @@ p {
         padding-right: 25px;
         padding-left: 25px;
         .intro {
-            // padding-top: 60px;
+            padding-top: 60px;
             div {
                 h2 {
                     margin-bottom: 20px;
@@ -189,6 +198,9 @@ p {
     main {
         padding-right: 50px;
         padding-left: 50px;
+        .intro {
+            padding-top: 80px;
+        }
     }
 }
 
@@ -294,12 +306,6 @@ p {
         transform: rotate(230deg) translate(0, 15px);
     }
 
-    main {
-        .intro {
-            padding-top: 80px;
-        }
-    }
-
     main.blur {
         filter: blur(3px);
         transition: all 0.2s;
@@ -377,9 +383,18 @@ p {
         height: 100px;
         background-color: white;
     }
+}
 
-    // main {
-    //     padding-right: 100px;
-    //     padding-left: 100px;
-    // }
+@media (min-width: 768.1px) and (max-width: 1092px) {
+    main {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (min-width: 1092.1px) {
+    main {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
 }
