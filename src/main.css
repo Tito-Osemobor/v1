@@ -12017,12 +12017,6 @@ p {
     padding-left: 50px;
   }
 }
-@media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-  .intro {
-    height: auto;
-    padding-top: 100px;
-  }
-}
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -12197,6 +12191,17 @@ p {
     width: 1px;
     height: 100px;
     background-color: white;
+  }
+}
+@media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+  .intro {
+    height: auto;
+    padding-top: 100px;
+  }
+  .sidebar-links::after,
+.right.sidebar::after {
+    content: "";
+    height: 85px;
   }
 }
 @media (min-width: 768.1px) and (max-width: 1092px) {
