@@ -12121,6 +12121,12 @@ p {
   main.blur {
     filter: blur(3px);
     transition: all 0.2s;
+    pointer-events: none;
+    --webkit-user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 }
 @media (min-width: 768.1px) {

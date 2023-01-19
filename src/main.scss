@@ -307,6 +307,9 @@ p {
     main.blur {
         filter: blur(3px);
         transition: all 0.2s;
+        pointer-events: none;
+        --webkit-user-select: none;
+        user-select: none;
     }
 }
 
