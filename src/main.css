@@ -11968,14 +11968,11 @@ main section {
 }
 main .intro {
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
-main .intro .first-intro {
-  margin-top: 10px;
 }
 main .intro div h2, main .intro div .h2 {
   font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
