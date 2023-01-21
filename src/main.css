@@ -12192,6 +12192,9 @@ p {
     height: 100px;
     background-color: white;
   }
+  main .intro div .email-link {
+    padding: 30px;
+  }
 }
 @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
   .intro {

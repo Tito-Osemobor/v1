@@ -167,10 +167,10 @@ main {
                 font-family: var(--font-sans);
                 font-size: var(--fz-lg);
             }
-            
         }
     }
 }
+
 
 p {
     max-width: 540px;
@@ -378,6 +378,16 @@ p {
         width: 1px;
         height: 100px;
         background-color: white;
+    }
+
+    main {
+        .intro {
+            div {
+                .email-link {
+                    padding: 30px;
+                }
+            }
+        }
     }
 }
 
