@@ -120,12 +120,12 @@ body {
     .resume-link {
         list-style-type: none;
         font-size: var(--fz-sm);
-        padding: 9px 14px;
-        border: solid 2px black;
-        border-radius: 6px;
         a {
             text-decoration: none;
             color: black;
+            padding: 9px 14px;
+            border: solid 2px black;
+            border-radius: 6px;
         }
     }
 }
@@ -167,10 +167,17 @@ main {
                 font-family: var(--font-sans);
                 font-size: var(--fz-lg);
             }
+            .email-link {
+                padding: 15px 30px;
+                transition: all 0.3s ease-in-out;
+            }
+            .email-link:hover {
+                background-color: rgba(167, 44, 44, 0.418);
+                transition: all 0.3s ease-in-out;
+            }
         }
     }
 }
-
 
 p {
     max-width: 540px;
@@ -194,8 +201,6 @@ p {
         padding-left: 50px;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .sidebar {
@@ -244,12 +249,18 @@ p {
             margin-bottom: 5px;
         }
         .resume-link {
-            padding: 18px 50px;
             margin-top: 5%;
             margin-bottom: 0px;
-            width: max-content;
-            border-radius: 6px;
-            border: solid 2px black;
+            a {
+                padding: 18px 50px;
+                width: max-content;
+                border-radius: 6px;
+                border: solid 2px black;
+                transition: all 0.3s ease-in-out;
+            }
+            a:hover {
+                background-color: rgba(0, 0, 0, 0.418);
+            }
         }
     }
 
@@ -382,11 +393,6 @@ p {
 
     main {
         .intro {
-            div {
-                .email-link {
-                    padding: 30px;
-                }
-            }
         }
     }
 }

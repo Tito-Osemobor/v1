@@ -11948,13 +11948,13 @@ body {
 .primary-navigation .resume-link {
   list-style-type: none;
   font-size: var(--fz-sm);
-  padding: 9px 14px;
-  border: solid 2px black;
-  border-radius: 6px;
 }
 .primary-navigation .resume-link a {
   text-decoration: none;
   color: black;
+  padding: 9px 14px;
+  border: solid 2px black;
+  border-radius: 6px;
 }
 
 main {
@@ -11993,6 +11993,14 @@ main .intro div .medium-header {
 main .intro div p {
   font-family: var(--font-sans);
   font-size: var(--fz-lg);
+}
+main .intro div .email-link {
+  padding: 15px 30px;
+  transition: all 0.3s ease-in-out;
+}
+main .intro div .email-link:hover {
+  background-color: rgba(167, 44, 44, 0.418);
+  transition: all 0.3s ease-in-out;
 }
 
 p {
@@ -12060,14 +12068,20 @@ p {
     margin-bottom: 5px;
   }
   .primary-navigation .resume-link {
-    padding: 18px 50px;
     margin-top: 5%;
     margin-bottom: 0px;
+  }
+  .primary-navigation .resume-link a {
+    padding: 18px 50px;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     border-radius: 6px;
     border: solid 2px black;
+    transition: all 0.3s ease-in-out;
+  }
+  .primary-navigation .resume-link a:hover {
+    background-color: rgba(0, 0, 0, 0.418);
   }
   .primary-navigation.is-active {
     transform: translateX(0%);
@@ -12191,9 +12205,6 @@ p {
     width: 1px;
     height: 100px;
     background-color: white;
-  }
-  main .intro div .email-link {
-    padding: 30px;
   }
 }
 @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
