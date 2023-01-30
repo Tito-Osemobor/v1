@@ -11955,6 +11955,10 @@ body {
   padding: 9px 14px;
   border: solid 2px black;
   border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.primary-navigation .resume-link a:hover {
+  background-color: rgba(0, 0, 0, 0.418);
 }
 
 main {
@@ -12078,10 +12082,6 @@ p {
     width: max-content;
     border-radius: 6px;
     border: solid 2px black;
-    transition: all 0.3s ease-in-out;
-  }
-  .primary-navigation .resume-link a:hover {
-    background-color: rgba(0, 0, 0, 0.418);
   }
   .primary-navigation.is-active {
     transform: translateX(0%);

@@ -126,6 +126,10 @@ body {
             padding: 9px 14px;
             border: solid 2px black;
             border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+        }
+        a:hover {
+            background-color: rgba(0, 0, 0, 0.418);
         }
     }
 }
@@ -256,10 +260,6 @@ p {
                 width: max-content;
                 border-radius: 6px;
                 border: solid 2px black;
-                transition: all 0.3s ease-in-out;
-            }
-            a:hover {
-                background-color: rgba(0, 0, 0, 0.418);
             }
         }
     }
