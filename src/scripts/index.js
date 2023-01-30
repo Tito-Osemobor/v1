@@ -49,4 +49,18 @@ window.addEventListener("resize", () => {
     }, 400);
 });
 
+// const sectionHeader = document.querySelector('.section-header');
+
+// sectionHeader.addEventListener('mouseenter', function() {
+//   const after = this.querySelector(':after');
+//   let width = 0;
+//   const interval = setInterval(() => {
+//     after.style.width = width + 'px';
+//     width += 2;
+//     if (width >= 200) {
+//       clearInterval(interval);
+//     }
+//   }, 50);
+// });
+
 navSlide();

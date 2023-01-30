@@ -11887,6 +11887,7 @@ textarea.form-control-lg {
 
 body {
   background-color: #343a40;
+  font-family: var(--font-sans);
 }
 
 ::-webkit-scrollbar {
@@ -11942,7 +11943,7 @@ body {
 .primary-navigation .primary-links a:before {
   content: "0" counter(item) ".";
   margin-right: 5px;
-  color: white;
+  color: whitesmoke;
   font-size: var(--fz-xxs);
 }
 .primary-navigation .resume-link {
@@ -11988,6 +11989,7 @@ main .intro div .big-header {
   padding-bottom: 0;
   margin-bottom: 0;
   margin-top: 25px;
+  color: black;
 }
 main .intro div .medium-header {
   font-size: clamp(30px, 8vw, 75px);
@@ -12000,11 +12002,43 @@ main .intro div p {
 }
 main .intro div .email-link {
   padding: 15px 30px;
+  font-family: var(--font-mono);
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 }
 main .intro div .email-link:hover {
   background-color: rgba(167, 44, 44, 0.418);
   transition: all 0.3s ease-in-out;
+}
+main .section-header {
+  color: black;
+  font-family: var(--font-sans-bold);
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  position: relative;
+  white-space: nowrap;
+}
+main .section-header::before {
+  color: whitesmoke;
+  counter-increment: section 1;
+  position: relative;
+  content: "0" counter(section) ".";
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+  bottom: 2px;
+}
+main .section-header::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  margin-left: 15px;
+  width: 0;
+  height: 1px;
+  background-color: whitesmoke;
+  transition: all 0.1s linear;
+}
+main .section-header:hover::after {
+  width: 200px;
 }
 
 p {
@@ -12021,6 +12055,9 @@ p {
   main {
     padding-right: 25px;
     padding-left: 25px;
+  }
+  main .about {
+    padding-top: 60px;
   }
 }
 @media (min-width: 492.1px) and (max-width: 768px) {
@@ -12062,6 +12099,7 @@ p {
     width: 100%;
     padding-top: 3px;
     padding-bottom: 20px;
+    color: black;
   }
   .primary-navigation .primary-links a::before {
     display: none;
@@ -12070,18 +12108,23 @@ p {
     content: "0" counter(item) ".";
     font-size: var(--fz-sm);
     margin-bottom: 5px;
+    color: whitesmoke;
   }
   .primary-navigation .resume-link {
     margin-top: 5%;
     margin-bottom: 0px;
   }
   .primary-navigation .resume-link a {
+    color: black;
     padding: 18px 50px;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     border-radius: 6px;
     border: solid 2px black;
+  }
+  main .about {
+    padding-top: 80px;
   }
   .primary-navigation.is-active {
     transform: translateX(0%);
@@ -12117,14 +12160,14 @@ p {
   }
   .nav-toggle.is-active:before {
     width: 34px;
-    transform: rotate(-230deg) translate(0, -12px);
+    transform: rotate(45deg) translate(0, 11px);
   }
   .nav-toggle.is-active .bar {
     opacity: 0;
   }
   .nav-toggle.is-active:after {
     width: 34px;
-    transform: rotate(230deg) translate(0, 15px);
+    transform: rotate(-45deg) translate(0, -14.5px);
   }
   main.blur {
     filter: blur(3px);
@@ -12205,6 +12248,9 @@ p {
     width: 1px;
     height: 100px;
     background-color: white;
+  }
+  main .about {
+    padding-top: 100px;
   }
 }
 @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
