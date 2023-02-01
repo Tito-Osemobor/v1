@@ -12010,6 +12010,9 @@ main .intro div .email-link:hover {
   background-color: rgba(167, 44, 44, 0.418);
   transition: all 0.3s ease-in-out;
 }
+main .about .section-header {
+  width: 100%;
+}
 main .section-header {
   color: black;
   font-family: var(--font-sans-bold);
@@ -12037,13 +12040,6 @@ main .section-header::after {
   background-color: whitesmoke;
   transition: all 0.1s linear;
 }
-main .section-header:hover::after {
-  width: 200px;
-}
-
-p {
-  max-width: 540px;
-}
 
 .resize-animation-stopper * {
   -webkit-animation: none !important;
@@ -12059,11 +12055,23 @@ p {
   main .about {
     padding-top: 60px;
   }
+  main .section-header {
+    overflow-x: hidden;
+  }
+  main .section-header:hover::after {
+    width: 100%;
+  }
 }
 @media (min-width: 492.1px) and (max-width: 768px) {
   main {
     padding-right: 50px;
     padding-left: 50px;
+  }
+  main .section-header {
+    overflow-x: hidden;
+  }
+  main .section-header:hover::after {
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -12269,10 +12277,22 @@ p {
     padding-left: 100px;
     padding-right: 100px;
   }
+  main .section-header {
+    overflow-x: hidden;
+  }
+  main .section-header:hover::after {
+    width: 200px;
+  }
 }
 @media (min-width: 1092.1px) {
   main {
     padding-left: 150px;
     padding-right: 150px;
+  }
+  main .section-header {
+    overflow-x: hidden;
+  }
+  main .section-header:hover::after {
+    width: 300px;
   }
 }
