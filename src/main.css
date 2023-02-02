@@ -11966,6 +11966,7 @@ main {
   max-width: 1600px;
   min-height: 100vh;
   margin: 0 auto;
+  counter-reset: section;
 }
 main section {
   max-width: 1000px;
@@ -12021,8 +12022,8 @@ main .section-header {
   white-space: nowrap;
 }
 main .section-header::before {
+  counter-increment: section;
   color: whitesmoke;
-  counter-increment: section 1;
   position: relative;
   content: "0" counter(section) ".";
   font-family: var(--font-mono);
@@ -12038,7 +12039,7 @@ main .section-header::after {
   width: 0;
   height: 1px;
   background-color: whitesmoke;
-  transition: all 0.1s linear;
+  transition: all 0.3s linear;
 }
 
 .resize-animation-stopper * {

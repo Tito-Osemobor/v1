@@ -139,6 +139,7 @@ main {
     max-width: 1600px;
     min-height: 100vh;
     margin: 0 auto;
+    counter-reset: section;
     section {
         max-width: 1000px;
         margin: 0 auto;
@@ -198,8 +199,8 @@ main {
         position: relative;
         white-space: nowrap;
         &::before {
+            counter-increment: section;
             color: whitesmoke;
-            counter-increment: section 1;
             position: relative;
             content: "0" counter(section) ".";
             font-family: var(--font-mono);
@@ -215,7 +216,7 @@ main {
             width: 0;
             height: 1px;
             background-color: whitesmoke;
-            transition: all 0.1s linear;
+            transition: all 0.3s linear;
         }
     }
 }
