@@ -12011,9 +12011,6 @@ main .intro div .email-link:hover {
   background-color: rgba(167, 44, 44, 0.418);
   transition: all 0.3s ease-in-out;
 }
-main .about .section-header {
-  width: 100%;
-}
 main .section-header {
   color: black;
   font-family: var(--font-sans-bold);
@@ -12040,6 +12037,72 @@ main .section-header::after {
   height: 1px;
   background-color: whitesmoke;
   transition: all 0.3s linear;
+}
+main .about .section-header {
+  width: 100%;
+}
+main .contact .section-header {
+  text-align: center;
+  font-size: var(--fz-lg) !important;
+}
+main .contact .section-header::before {
+  font-size: var(--fz-sm) !important;
+  bottom: 0.5px !important;
+}
+main .contact .section-header:hover::after {
+  width: 0 !important;
+}
+
+.project-container {
+  margin-top: 3px;
+  margin: 0 auto;
+}
+.project-container div .project-card {
+  height: 250px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: all 0.2s ease-out;
+  overflow: visible;
+}
+.project-container div .project-card .content {
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+.project-container div .project-card .content .text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.project-container div .project-card .content .text-body {
+  color: rgb(134, 134, 134);
+}
+.project-container div .project-card .card-button {
+  transform: translate(-50%, 30%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.project-container div .project-card:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-7px);
+  transition: all 0.2s ease-in;
+}
+.project-container div .project-card:hover .card-button {
+  transform: translate(-50%, 0);
+  opacity: 1;
 }
 
 .resize-animation-stopper * {
