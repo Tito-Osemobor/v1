@@ -302,12 +302,6 @@ main {
     main {
         padding-right: 50px;
         padding-left: 50px;
-        .section-header {
-            overflow-x: hidden;
-            &::after {
-                width: 100%;
-            }
-        }
     }
 }
 
@@ -430,6 +424,13 @@ main {
         pointer-events: none;
         --webkit-user-select: none;
         user-select: none;
+    }
+
+    .section-header {
+        overflow-x: hidden;
+        &::after {
+            width: 100%;
+        }
     }
 
     .project-container {

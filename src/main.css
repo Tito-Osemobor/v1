@@ -12121,12 +12121,6 @@ main .contact .section-header::after {
     padding-right: 50px;
     padding-left: 50px;
   }
-  main .section-header {
-    overflow-x: hidden;
-  }
-  main .section-header::after {
-    width: 100%;
-  }
 }
 @media (max-width: 768px) {
   .sidebar {
@@ -12240,6 +12234,12 @@ main .contact .section-header::after {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+  }
+  .section-header {
+    overflow-x: hidden;
+  }
+  .section-header::after {
+    width: 100%;
   }
   .project-container div .project-card .card-button {
     transform: translateY(-40%);
