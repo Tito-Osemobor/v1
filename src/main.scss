@@ -269,20 +269,13 @@ main {
                 transform: translateY(-7px);
                 transition: all 0.2s ease-in;
                 .card-button {
-                    transform: translateY(-8%);
+                    transform: translateY(-40%);
                     opacity: 1;
                 }
             }
         }
     }
 }
-
-
-
-
-
-
-
 
 .resize-animation-stopper * {
     animation: none !important;
@@ -443,7 +436,7 @@ main {
         div {
             .project-card {
                 .card-button {
-                    transform: translateY(0);
+                    transform: translateY(-40%);
                     opacity: 1;
                 }
             }

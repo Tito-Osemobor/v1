@@ -12091,7 +12091,7 @@ main .contact .section-header::after {
   transition: all 0.2s ease-in;
 }
 .project-container div .project-card:hover .card-button {
-  transform: translateY(-8%);
+  transform: translateY(-40%);
   opacity: 1;
 }
 
@@ -12242,7 +12242,7 @@ main .contact .section-header::after {
             user-select: none;
   }
   .project-container div .project-card .card-button {
-    transform: translateY(0);
+    transform: translateY(-40%);
     opacity: 1;
   }
 }
