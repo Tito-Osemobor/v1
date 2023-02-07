@@ -207,10 +207,8 @@ main {
             position: absolute;
             top: 40%;
             margin-left: 15px;
-            width: 0;
             height: 1px;
             background-color: whitesmoke;
-            transition: all 0.3s linear;
         }
     }
 
@@ -227,7 +225,7 @@ main {
                 font-size: var(--fz-sm) !important;
                 bottom: 0.5px !important;
             }
-            &:hover::after {
+            &::after {
                 width: 0 !important;
             }
         }
@@ -259,17 +257,9 @@ main {
                 }
             }
             .card-button {
-                transform: translate(-50%, 30%);
-                width: 60%;
-                border-radius: 1rem;
-                border: none;
+                transform: translateY(20%);
                 text-align: center;
                 color: #fff;
-                font-size: 1rem;
-                padding: 0.5rem 1rem;
-                position: absolute;
-                left: 50%;
-                bottom: 0;
                 opacity: 0;
                 transition: all 0.2s ease-out;
             }
@@ -279,7 +269,7 @@ main {
                 transform: translateY(-7px);
                 transition: all 0.2s ease-in;
                 .card-button {
-                    transform: translate(-50%, 0);
+                    transform: translateY(-8%);
                     opacity: 1;
                 }
             }
@@ -321,7 +311,7 @@ main {
         padding-left: 50px;
         .section-header {
             overflow-x: hidden;
-            &:hover::after {
+            &::after {
                 width: 100%;
             }
         }
@@ -448,6 +438,18 @@ main {
         --webkit-user-select: none;
         user-select: none;
     }
+
+    .project-container {
+        div {
+            .project-card {
+                .card-button {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
 }
 
 @media (min-width: 768.1px) {
@@ -551,7 +553,7 @@ main {
         padding-right: 100px;
         .section-header {
             overflow-x: hidden;
-            &:hover::after {
+            &::after {
                 width: 200px;
             }
         }
@@ -564,7 +566,7 @@ main {
         padding-right: 150px;
         .section-header {
             overflow-x: hidden;
-            &:hover::after {
+            &::after {
                 width: 300px;
             }
         }

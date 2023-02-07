@@ -12033,10 +12033,8 @@ main .section-header::after {
   position: absolute;
   top: 40%;
   margin-left: 15px;
-  width: 0;
   height: 1px;
   background-color: whitesmoke;
-  transition: all 0.3s linear;
 }
 main .about .section-header {
   width: 100%;
@@ -12049,7 +12047,7 @@ main .contact .section-header::before {
   font-size: var(--fz-sm) !important;
   bottom: 0.5px !important;
 }
-main .contact .section-header:hover::after {
+main .contact .section-header::after {
   width: 0 !important;
 }
 
@@ -12080,17 +12078,9 @@ main .contact .section-header:hover::after {
   color: rgb(134, 134, 134);
 }
 .project-container div .project-card .card-button {
-  transform: translate(-50%, 30%);
-  width: 60%;
-  border-radius: 1rem;
-  border: none;
+  transform: translateY(20%);
   text-align: center;
   color: #fff;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
   opacity: 0;
   transition: all 0.2s ease-out;
 }
@@ -12101,7 +12091,7 @@ main .contact .section-header:hover::after {
   transition: all 0.2s ease-in;
 }
 .project-container div .project-card:hover .card-button {
-  transform: translate(-50%, 0);
+  transform: translateY(-8%);
   opacity: 1;
 }
 
@@ -12134,7 +12124,7 @@ main .contact .section-header:hover::after {
   main .section-header {
     overflow-x: hidden;
   }
-  main .section-header:hover::after {
+  main .section-header::after {
     width: 100%;
   }
 }
@@ -12251,6 +12241,10 @@ main .contact .section-header:hover::after {
         -ms-user-select: none;
             user-select: none;
   }
+  .project-container div .project-card .card-button {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 @media (min-width: 768.1px) {
   .sidebar {
@@ -12344,7 +12338,7 @@ main .contact .section-header:hover::after {
   main .section-header {
     overflow-x: hidden;
   }
-  main .section-header:hover::after {
+  main .section-header::after {
     width: 200px;
   }
 }
@@ -12356,7 +12350,7 @@ main .contact .section-header:hover::after {
   main .section-header {
     overflow-x: hidden;
   }
-  main .section-header:hover::after {
+  main .section-header::after {
     width: 300px;
   }
 }
