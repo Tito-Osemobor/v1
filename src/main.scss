@@ -264,10 +264,13 @@ main {
         align-items: center;
         .section-header {
             text-align: center;
+            font-family: var(--font-mono);
             font-size: var(--fz-lg) !important;
+            
             &::before {
                 font-size: var(--fz-sm) !important;
-                bottom: 0.5px !important;
+                bottom: 1px !important;
+                margin-right: 5px;
             }
             &::after {
                 width: 0 !important;
