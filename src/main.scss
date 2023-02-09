@@ -184,7 +184,7 @@ main {
         padding: 0 !important;
         div {
             h2 {
-                font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+                font-size: clamp(var(--fz-md), 5vw, var(--fz-lg));
                 font-family: var(--font-mono);
                 font-weight: 500;
                 margin-bottom: 0;
@@ -212,6 +212,7 @@ main {
             p {
                 font-family: var(--font-sans);
                 font-size: var(--fz-lg);
+                max-width: 540px;
                 .highlight {
                     color: var(--co-main);
                 }

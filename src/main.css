@@ -11895,7 +11895,7 @@ main .intro {
   padding: 0 !important;
 }
 main .intro div h2, main .intro div .h2 {
-  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  font-size: clamp(var(--fz-md), 5vw, var(--fz-lg));
   font-family: var(--font-mono);
   font-weight: 500;
   margin-bottom: 0;
@@ -11923,6 +11923,7 @@ main .intro div .medium-header .typing {
 main .intro div p {
   font-family: var(--font-sans);
   font-size: var(--fz-lg);
+  max-width: 540px;
 }
 main .intro div p .highlight {
   color: var(--co-main);

@@ -1,5 +1,6 @@
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".nav-toggle");
+const navLink = document.querySelectorAll(".nav-links");
 
 const navSlide = () => {
     navToggle.addEventListener("click", () => {
@@ -23,7 +24,7 @@ window.addEventListener("click", function (event) {
         primaryNav.classList.remove("is-active");
         document.body.classList.remove("overflow-hidden");
         document.querySelector("main").classList.remove("blur");
-        document.querySelector("main").style.pointerEvents = 'auto';
+        document.querySelector("main").style.pointerEvents = "auto";
     }
 });
 
@@ -36,9 +37,20 @@ window.addEventListener("touchstart", function (event) {
         primaryNav.classList.remove("is-active");
         document.body.classList.remove("overflow-hidden");
         document.querySelector("main").classList.remove("blur");
-        document.querySelector("main").style.pointerEvents = 'auto';
+        document.querySelector("main").style.pointerEvents = "auto";
     }
 });
+
+navLink.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+        navToggle.classList.remove("is-active");
+        primaryNav.classList.remove("is-active");
+        document.body.classList.remove("overflow-hidden");
+        document.querySelector("main").classList.remove("blur");
+        document.querySelector("main").style.pointerEvents = "auto";
+    });
+});
+
 
 let resizeTimer;
 window.addEventListener("resize", () => {
