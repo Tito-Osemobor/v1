@@ -27,7 +27,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
 }
 
 :root {
@@ -43,22 +42,16 @@
     --fz-xl: 20px;
     --fz-xxl: 22px;
     --fz-heading: 32px;
-    --background: #ebebeb;
-    --sides: #8c8c8c;
-    --co-main: #2e5299;
-    --co-main-hover: #98B0E0;
-    --sub-main: #5d5d5d;
-    --main: #000000;
 }
 
 body {
-    background-color: var(--background);
+    background-color: #343a40;
     font-family: var(--font-sans);
 }
 
 ::-webkit-scrollbar {
     width: 8px;
-    background-color: var(--background);
+    background-color: #6c757d;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -74,11 +67,6 @@ body {
 
 .logo {
     margin: 1rem;
-    padding: 0;
-    path {
-        fill: var(--co-main);
-        transition: all 0.15s ease-in-out;
-    }
 }
 
 .nav-toggle {
@@ -86,7 +74,6 @@ body {
 }
 
 .primary-header {
-    background-color: var(--background);
     align-items: center;
     justify-content: space-between;
     position: fixed;
@@ -108,15 +95,13 @@ body {
         counter-increment: item 1;
         a {
             text-decoration: none;
-            color: var(--main);
-            font-weight: 500;
+            color: black;
         }
         a:before {
             content: "0" counter(item) ".";
             margin-right: 5px;
+            color: whitesmoke;
             font-size: var(--fz-xxs);
-            font-weight: 500;
-            color: var(--co-main);
         }
     }
     .resume-link {
@@ -124,16 +109,14 @@ body {
         font-size: var(--fz-sm);
         a {
             text-decoration: none;
-            color: var(--co-main);
+            color: black;
             padding: 9px 14px;
-            border: solid 2px var(--co-main);
+            border: solid 2px black;
             border-radius: 6px;
             transition: all 0.2s ease-in-out;
-            font-weight: 500;
         }
         a:hover {
-            background-color: var(--co-main-hover);
-            transition: all 0.2s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.418);
         }
     }
 }
@@ -157,7 +140,7 @@ main {
         white-space: nowrap;
         &::before {
             counter-increment: section;
-            color: var(--co-main);
+            color: whitesmoke;
             position: relative;
             content: "0" counter(section) ".";
             font-family: var(--font-mono);
@@ -171,7 +154,7 @@ main {
             top: 40%;
             margin-left: 15px;
             height: 1px;
-            background-color: var(--sides);
+            background-color: whitesmoke;
         }
     }
 
@@ -186,9 +169,6 @@ main {
             h2 {
                 font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
                 font-family: var(--font-mono);
-                font-weight: 500;
-                margin-bottom: 0;
-                color: var(--co-main);
             }
             .big-header {
                 font-size: clamp(50px, 10vw, 100px);
@@ -197,42 +177,28 @@ main {
                 padding-bottom: 0;
                 margin-bottom: 0;
                 margin-top: 25px;
-                color: var(--main);
-                line-height: 1;
+                color: black;
             }
             .medium-header {
                 font-size: clamp(30px, 8vw, 75px);
                 font-family: var(--font-sans-bold);
                 font-weight: 400;
-                color: var(--sides);
-                .typing {
-                    color: var(--co-main);
-                }
             }
             p {
                 font-family: var(--font-sans);
                 font-size: var(--fz-lg);
-                .highlight {
-                    color: var(--co-main);
-                }
             }
             .email-link {
                 padding: 15px 30px;
                 font-family: var(--font-mono);
                 transition: all 0.3s ease-in-out;
                 white-space: nowrap;
-                color: var(--co-main);
-                border: var(--co-main) solid 2px;
             }
             .email-link:hover {
-                background-color: var(--co-main-hover);
+                background-color: rgba(167, 44, 44, 0.418);
                 transition: all 0.3s ease-in-out;
             }
         }
-    }
-
-    .typed-cursor {
-        color: var(--co-main);
     }
 
     .about {
@@ -254,7 +220,7 @@ main {
                     border: 2px solid #c3c6ce;
                     transition: all 0.2s ease-out;
                     overflow: visible;
-                    .project-content {
+                    .content {
                         height: 100%;
                         gap: 0.5em;
                         display: grid;
@@ -300,7 +266,7 @@ main {
             text-align: center;
             font-family: var(--font-mono);
             font-size: var(--fz-lg) !important;
-
+            
             &::before {
                 font-size: var(--fz-sm) !important;
                 bottom: 1px !important;
@@ -312,7 +278,7 @@ main {
         }
         .title {
             font-family: var(--font-sans-bold);
-            color: var(--co-main);
+            color: black;
             font-size: clamp(40px, 5vw, 60px);
         }
         p {
@@ -324,17 +290,10 @@ main {
         a {
             margin-top: 50px;
             padding: 13px 10px;
-            color: var(--co-main);
-            border: solid 2px var(--co-main);
-            transition: all 0.2s ease-in-out;
             font-size: var(--fz-sm);
             font-family: var(--font-mono);
             width: -moz-fit-content;
             width: fit-content;
-            &:hover {
-                background-color: var(--co-main-hover);
-                transition: all 0.2s ease-in-out;
-            }
         }
     }
 }
@@ -356,7 +315,7 @@ footer {
                 a {
                     .logo {
                         path {
-                            fill: var(--sub-main);
+                            fill: black;
                         }
                     }
                 }
@@ -365,18 +324,16 @@ footer {
         a {
             text-decoration: none;
             font-family: var(--font-mono);
+            color: black;
             font-size: var(--fz-xxs);
             div {
                 transition: all 0.2s ease-in-out;
-                color: var(--sub-main);
             }
         }
         a:hover {
-            color: var(--co-main);
             div {
                 transform: translateY(-5px);
                 transition: all 0.2s ease-in-out;
-                color: var(--co-main);
             }
         }
     }
@@ -387,24 +344,10 @@ footer {
     transition: none !important;
 }
 
-@media (max-width: 330px) {
-    .primary-header {
-        height: 80px;
-    }
-}
-
 @media (max-width: 492px) {
     main {
-        padding-top: 30px;
         padding-right: 25px;
         padding-left: 25px;
-        .intro {
-            div {
-                .email-link {
-                    margin-top: 0;
-                }
-            }
-        }
         section {
             padding-top: 60px;
             padding-bottom: 60px;
@@ -453,8 +396,8 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: var(--background);
-        box-shadow: -10px 0px 30px -15px var(--sides);
+        background-color: $gray-700;
+        box-shadow: -10px 0px 30px -15px $gray-700;
         transform: translateX(130%);
         transition: all 0.2s ease-in;
         .primary-links {
@@ -462,11 +405,10 @@ footer {
                 display: block;
                 text-align: center;
                 font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
-                font-weight: 500;
                 width: 100%;
                 padding-top: 3px;
                 padding-bottom: 20px;
-                color: var(--main);
+                color: black;
             }
             a::before {
                 display: none;
@@ -476,18 +418,17 @@ footer {
             content: "0" counter(item) ".";
             font-size: var(--fz-sm);
             margin-bottom: 5px;
-            color: var(--co-main);
+            color: whitesmoke;
         }
         .resume-link {
             margin-top: 5%;
             margin-bottom: 0px;
             a {
-                color: var(--co-main);
+                color: black;
                 padding: 18px 50px;
                 width: max-content;
                 border-radius: 6px;
-                border: solid 2px var(--co-main);
-                transition: all 0.2s ease-in-out;
+                border: solid 2px black;
             }
         }
     }
@@ -515,7 +456,7 @@ footer {
         content: "";
         display: block;
         height: 3.4px;
-        background-color: var(--co-main);
+        background-color: black;
         margin: 5.5px 0;
         border-radius: 15px;
         transition: 0.2s;
@@ -605,7 +546,7 @@ footer {
                     transform: translateY(0);
                     transition: all 0.2s ease-in-out;
                     path {
-                        fill: var(--sides);
+                        fill: white;
                         transition: all 0.2s ease-in-out;
                     }
                 }
@@ -613,7 +554,7 @@ footer {
                     transform: translateY(-5px);
                     transition: all 0.2s ease-in-out;
                     path {
-                        fill: var(--co-main);
+                        fill: red;
                         transition: all 0.2s ease-in-out;
                     }
                 }
@@ -628,7 +569,7 @@ footer {
         align-items: center;
         a {
             text-decoration: none;
-            color: var(--sides);
+            color: white;
             font-size: var(--fz-md);
             font-family: monospace;
             writing-mode: vertical-rl;
@@ -637,7 +578,7 @@ footer {
             transition: all 0.2s ease-in-out;
         }
         a:hover {
-            color: var(--co-main);
+            color: red;
             transform: translateY(-5px);
             transition: all 0.2s ease-in-out;
         }
@@ -649,7 +590,7 @@ footer {
         display: block;
         width: 1px;
         height: 100px;
-        background-color: var(--sides);
+        background-color: white;
     }
 
     main {
