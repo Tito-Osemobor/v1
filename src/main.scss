@@ -429,7 +429,7 @@ footer {
     }
 }
 
-@media (max-width: 899px) {
+@media (min-width: 400px) {
     .sidebar {
         display: none;
     }

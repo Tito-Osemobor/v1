@@ -12110,7 +12110,7 @@ footer div a:hover div {
     padding-bottom: 80px;
   }
 }
-@media (max-width: 899px) {
+@media (min-width: 400px) {
   .sidebar {
     display: none;
   }
