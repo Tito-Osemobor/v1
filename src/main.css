@@ -11740,7 +11740,6 @@ textarea.form-control-lg {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: black;
 }
 
 :root {
@@ -11756,22 +11755,30 @@ textarea.form-control-lg {
   --fz-xl: 20px;
   --fz-xxl: 22px;
   --fz-heading: 32px;
-  --background: #ebebeb;
-  --sides: #8c8c8c;
-  --co-main: #2e5299;
-  --co-main-hover: #98B0E0;
-  --sub-main: #5d5d5d;
-  --main: #000000;
+  --border-radius: 4px;
+  --nav-height: 100px;
+  --nav-scroll-height: 70px;
+  --tab-height: 42px;
+  --tab-width: 120px;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --nav-toggle-width: 30px;
+  --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+  --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+  --ham-after: bottom 0.1s ease-in 0.25s,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ham-after-active: bottom 0.1s ease-out,
+      transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
 body {
-  background-color: var(--background);
+  background-color: #343a40;
   font-family: var(--font-sans);
 }
 
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: var(--background);
+  background-color: #6c757d;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -11787,11 +11794,6 @@ body {
 
 .logo {
   margin: 1rem;
-  padding: 0;
-}
-.logo path {
-  fill: var(--co-main);
-  transition: all 0.15s ease-in-out;
 }
 
 .nav-toggle {
@@ -11799,7 +11801,6 @@ body {
 }
 
 .primary-header {
-  background-color: var(--background);
   align-items: center;
   justify-content: space-between;
   position: fixed;
@@ -11823,15 +11824,13 @@ body {
 }
 .primary-navigation .primary-links a {
   text-decoration: none;
-  color: var(--main);
-  font-weight: 500;
+  color: black;
 }
 .primary-navigation .primary-links a:before {
   content: "0" counter(item) ".";
   margin-right: 5px;
+  color: whitesmoke;
   font-size: var(--fz-xxs);
-  font-weight: 500;
-  color: var(--co-main);
 }
 .primary-navigation .resume-link {
   list-style-type: none;
@@ -11839,16 +11838,14 @@ body {
 }
 .primary-navigation .resume-link a {
   text-decoration: none;
-  color: var(--co-main);
+  color: black;
   padding: 9px 14px;
-  border: solid 2px var(--co-main);
+  border: solid 2px black;
   border-radius: 6px;
   transition: all 0.2s ease-in-out;
-  font-weight: 500;
 }
 .primary-navigation .resume-link a:hover {
-  background-color: var(--co-main-hover);
-  transition: all 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.418);
 }
 
 main {
@@ -11861,6 +11858,45 @@ main section {
   max-width: 1000px;
   margin: 0 auto;
 }
+main .intro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .intro div h2, main .intro div .h2 {
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  font-family: var(--font-mono);
+}
+main .intro div .big-header {
+  font-size: clamp(50px, 10vw, 100px);
+  font-family: var(--font-sans-bold);
+  font-weight: 600;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 25px;
+  color: black;
+}
+main .intro div .medium-header {
+  font-size: clamp(30px, 8vw, 75px);
+  font-family: var(--font-sans-bold);
+  font-weight: 400;
+}
+main .intro div p {
+  font-family: var(--font-sans);
+  font-size: var(--fz-lg);
+}
+main .intro div .email-link {
+  padding: 15px 30px;
+  font-family: var(--font-mono);
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+}
+main .intro div .email-link:hover {
+  background-color: rgba(167, 44, 44, 0.418);
+  transition: all 0.3s ease-in-out;
+}
 main .section-header {
   color: black;
   font-family: var(--font-sans-bold);
@@ -11870,7 +11906,7 @@ main .section-header {
 }
 main .section-header::before {
   counter-increment: section;
-  color: var(--co-main);
+  color: whitesmoke;
   position: relative;
   content: "0" counter(section) ".";
   font-family: var(--font-mono);
@@ -11884,69 +11920,28 @@ main .section-header::after {
   top: 40%;
   margin-left: 15px;
   height: 1px;
-  background-color: var(--sides);
+  background-color: whitesmoke;
 }
-main .intro {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 !important;
+main .about .section-header {
+  width: 100%;
 }
-main .intro div h2, main .intro div .h2 {
-  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
-  font-family: var(--font-mono);
-  font-weight: 500;
-  margin-bottom: 0;
-  color: var(--co-main);
+main .contact .section-header {
+  text-align: center;
+  font-size: var(--fz-lg) !important;
 }
-main .intro div .big-header {
-  font-size: clamp(50px, 10vw, 100px);
-  font-family: var(--font-sans-bold);
-  font-weight: 600;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 25px;
-  color: var(--main);
-  line-height: 1;
+main .contact .section-header::before {
+  font-size: var(--fz-sm) !important;
+  bottom: 0.5px !important;
 }
-main .intro div .medium-header {
-  font-size: clamp(30px, 8vw, 75px);
-  font-family: var(--font-sans-bold);
-  font-weight: 400;
-  color: var(--sides);
+main .contact .section-header::after {
+  width: 0 !important;
 }
-main .intro div .medium-header .typing {
-  color: var(--co-main);
-}
-main .intro div p {
-  font-family: var(--font-sans);
-  font-size: var(--fz-lg);
-}
-main .intro div p .highlight {
-  color: var(--co-main);
-}
-main .intro div .email-link {
-  padding: 15px 30px;
-  font-family: var(--font-mono);
-  transition: all 0.3s ease-in-out;
-  white-space: nowrap;
-  color: var(--co-main);
-  border: var(--co-main) solid 2px;
-}
-main .intro div .email-link:hover {
-  background-color: var(--co-main-hover);
-  transition: all 0.3s ease-in-out;
-}
-main .typed-cursor {
-  color: var(--co-main);
-}
-main .projects .project-container {
+
+.project-container {
   margin-top: 3px;
   margin: 0 auto;
 }
-main .projects .project-container div .project-card {
+.project-container div .project-card {
   height: 250px;
   border-radius: 8px;
   background: #f5f5f5;
@@ -11955,119 +11950,35 @@ main .projects .project-container div .project-card {
   transition: all 0.2s ease-out;
   overflow: visible;
 }
-main .projects .project-container div .project-card .project-content {
+.project-container div .project-card .content {
   height: 100%;
   gap: 0.5em;
   display: grid;
   place-content: center;
 }
-main .projects .project-container div .project-card .project-content .text-title {
+.project-container div .project-card .content .text-title {
   font-size: 1.5em;
   font-weight: bold;
 }
-main .projects .project-container div .project-card .project-content .text-body {
+.project-container div .project-card .content .text-body {
   color: rgb(134, 134, 134);
 }
-main .projects .project-container div .project-card .card-button {
+.project-container div .project-card .card-button {
   transform: translateY(20%);
   text-align: center;
   color: #fff;
   opacity: 0;
   transition: all 0.2s ease-out;
 }
-main .projects .project-container div .project-card:hover {
+.project-container div .project-card:hover {
   border-color: #008bf8;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-7px);
   transition: all 0.2s ease-in;
 }
-main .projects .project-container div .project-card:hover .card-button {
+.project-container div .project-card:hover .card-button {
   transform: translateY(-40%);
   opacity: 1;
-}
-main .contact {
-  text-align: center;
-  max-width: 600px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .contact .section-header {
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: var(--fz-lg) !important;
-}
-main .contact .section-header::before {
-  font-size: var(--fz-sm) !important;
-  bottom: 1px !important;
-  margin-right: 5px;
-}
-main .contact .section-header::after {
-  width: 0 !important;
-}
-main .contact .title {
-  font-family: var(--font-sans-bold);
-  color: var(--co-main);
-  font-size: clamp(40px, 5vw, 60px);
-}
-main .contact p {
-  font-family: var(--font-sans);
-  font-size: var(--fz-lg);
-  margin: 0;
-  position: relative;
-}
-main .contact a {
-  margin-top: 50px;
-  padding: 13px 10px;
-  color: var(--co-main);
-  border: solid 2px var(--co-main);
-  transition: all 0.2s ease-in-out;
-  font-size: var(--fz-sm);
-  font-family: var(--font-mono);
-  width: -moz-fit-content;
-  width: fit-content;
-}
-main .contact a:hover {
-  background-color: var(--co-main-hover);
-  transition: all 0.2s ease-in-out;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: auto;
-  min-height: 70px;
-  padding: 15px;
-}
-footer div {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-footer div ul {
-  display: none;
-}
-footer div ul li a .logo path {
-  fill: var(--sub-main);
-}
-footer div a {
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: var(--fz-xxs);
-}
-footer div a div {
-  transition: all 0.2s ease-in-out;
-  color: var(--sub-main);
-}
-footer div a:hover {
-  color: var(--co-main);
-}
-footer div a:hover div {
-  transform: translateY(-5px);
-  transition: all 0.2s ease-in-out;
-  color: var(--co-main);
 }
 
 .resize-animation-stopper * {
@@ -12075,23 +11986,13 @@ footer div a:hover div {
   transition: none !important;
 }
 
-@media (max-width: 330px) {
-  .primary-header {
-    height: 80px;
-  }
-}
 @media (max-width: 492px) {
   main {
-    padding-top: 30px;
     padding-right: 25px;
     padding-left: 25px;
   }
-  main .intro div .email-link {
-    margin-top: 0;
-  }
-  main section {
+  main .about {
     padding-top: 60px;
-    padding-bottom: 60px;
   }
   main .section-header {
     overflow-x: hidden;
@@ -12105,9 +12006,11 @@ footer div a:hover div {
     padding-right: 50px;
     padding-left: 50px;
   }
-  main section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  main .section-header {
+    overflow-x: hidden;
+  }
+  main .section-header::after {
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -12131,8 +12034,8 @@ footer div a:hover div {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--background);
-    box-shadow: -10px 0px 30px -15px var(--sides);
+    background-color: #495057;
+    box-shadow: -10px 0px 30px -15px #495057;
     transform: translateX(130%);
     transition: all 0.2s ease-in;
   }
@@ -12140,11 +12043,10 @@ footer div a:hover div {
     display: block;
     text-align: center;
     font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
-    font-weight: 500;
     width: 100%;
     padding-top: 3px;
     padding-bottom: 20px;
-    color: var(--main);
+    color: black;
   }
   .primary-navigation .primary-links a::before {
     display: none;
@@ -12153,20 +12055,22 @@ footer div a:hover div {
     content: "0" counter(item) ".";
     font-size: var(--fz-sm);
     margin-bottom: 5px;
-    color: var(--co-main);
+    color: whitesmoke;
   }
   .primary-navigation .resume-link {
     margin-top: 5%;
     margin-bottom: 0px;
   }
   .primary-navigation .resume-link a {
-    color: var(--co-main);
+    color: black;
     padding: 18px 50px;
     width: -moz-max-content;
     width: max-content;
     border-radius: 6px;
-    border: solid 2px var(--co-main);
-    transition: all 0.2s ease-in-out;
+    border: solid 2px black;
+  }
+  main .about {
+    padding-top: 80px;
   }
   .primary-navigation.is-active {
     transform: translateX(0%);
@@ -12189,7 +12093,7 @@ footer div a:hover div {
     content: "";
     display: block;
     height: 3.4px;
-    background-color: var(--co-main);
+    background-color: black;
     margin: 5.5px 0;
     border-radius: 15px;
     transition: 0.2s;
@@ -12220,23 +12124,9 @@ footer div a:hover div {
        -moz-user-select: none;
             user-select: none;
   }
-  .section-header {
-    overflow-x: hidden;
-  }
-  .section-header::after {
-    width: 100%;
-  }
   .project-container div .project-card .card-button {
     transform: translateY(-40%);
     opacity: 1;
-  }
-  main .contact {
-    margin-bottom: 50px;
-  }
-  footer div ul {
-    padding: 0;
-    display: flex;
-    list-style-type: none;
   }
 }
 @media (min-width: 768.1px) {
@@ -12267,7 +12157,7 @@ footer div a:hover div {
     transition: all 0.2s ease-in-out;
   }
   .left.sidebar .sidebar-links li a .logo path {
-    fill: var(--sides);
+    fill: white;
     transition: all 0.2s ease-in-out;
   }
   .left.sidebar .sidebar-links li a:hover .logo {
@@ -12275,7 +12165,7 @@ footer div a:hover div {
     transition: all 0.2s ease-in-out;
   }
   .left.sidebar .sidebar-links li a:hover .logo path {
-    fill: var(--co-main);
+    fill: red;
     transition: all 0.2s ease-in-out;
   }
   .right.sidebar {
@@ -12286,7 +12176,7 @@ footer div a:hover div {
   }
   .right.sidebar a {
     text-decoration: none;
-    color: var(--sides);
+    color: white;
     font-size: var(--fz-md);
     font-family: monospace;
     writing-mode: vertical-rl;
@@ -12295,7 +12185,7 @@ footer div a:hover div {
     transition: all 0.2s ease-in-out;
   }
   .right.sidebar a:hover {
-    color: var(--co-main);
+    color: red;
     transform: translateY(-5px);
     transition: all 0.2s ease-in-out;
   }
@@ -12305,14 +12195,10 @@ footer div a:hover div {
     display: block;
     width: 1px;
     height: 100px;
-    background-color: var(--sides);
+    background-color: white;
   }
-  main section {
+  main .about {
     padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  main .contact {
-    margin-bottom: 100px;
   }
 }
 @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
