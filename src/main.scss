@@ -387,11 +387,11 @@ footer {
     transition: none !important;
 }
 
-@media (max-width: 330px) {
-    .primary-header {
-        height: 80px;
-    }
-}
+// @media (max-width: 330px) {
+//     .primary-header {
+//         height: 80px;
+//     }
+// }
 
 @media (max-width: 492px) {
     main {
@@ -431,7 +431,7 @@ footer {
 
 @media (max-width: 768px) {
     .sidebar {
-        // display: none;
+        display: none;
     }
 
     body.overflow-hidden {

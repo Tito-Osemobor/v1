@@ -12075,11 +12075,6 @@ footer div a:hover div {
   transition: none !important;
 }
 
-@media (max-width: 330px) {
-  .primary-header {
-    height: 80px;
-  }
-}
 @media (max-width: 492px) {
   main {
     padding-top: 30px;
@@ -12111,6 +12106,9 @@ footer div a:hover div {
   }
 }
 @media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
   body.overflow-hidden {
     overflow: hidden;
   }
