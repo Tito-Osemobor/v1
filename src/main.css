@@ -12111,9 +12111,6 @@ footer div a:hover div {
   }
 }
 @media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
   body.overflow-hidden {
     overflow: hidden;
   }
