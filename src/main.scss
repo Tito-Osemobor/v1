@@ -47,7 +47,7 @@
     --sides: #8c8c8c;
     --co-main: #2e5299;
     --co-main-hover: #98b0e0;
-    --sub-main: #5d5d5d;
+    --sub-main: #404040;
     --main: #000000;
 }
 
@@ -225,6 +225,7 @@ main {
                 font-family: var(--font-sans);
                 font-size: var(--fz-lg);
                 max-width: 540px;
+                color: var(--sub-main);
                 .highlight {
                     color: var(--co-main);
                 }
@@ -255,6 +256,7 @@ main {
                     p {
                         font-size: var(--fz-xl);
                         font-family: var(--font-sans);
+                        color: var(--sub-main);
                     }
                 }
             }
@@ -349,7 +351,8 @@ main {
         }
         p {
             font-family: var(--font-sans);
-            font-size: var(--fz-lg);
+            font-size: var(--fz-xl);
+            color: var(--sub-main);
             margin: 0;
             position: relative;
         }
