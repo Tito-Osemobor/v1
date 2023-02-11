@@ -12127,7 +12127,7 @@ footer div a:hover div {
   .primary-header.show {
     top: 0;
     height: 60px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
   }
 }
 @media (max-width: 768px) {
