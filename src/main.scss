@@ -249,9 +249,17 @@ main {
     }
 
     .about {
-        div {
+        .about-wrapper {
+            .about-content {
+                .about-info {
+                    p {
+                        font-size: var(--fz-xl);
+                        font-family: var(--font-sans);
+                    }
+                }
+            }
             .image-wrapper {
-                max-width: 300px;
+                max-width: 370px;
                 .image-container {
                     img {
                         width: 100%;
