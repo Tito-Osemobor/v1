@@ -5,19 +5,19 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @font-face {
     font-family: "Calibre";
-    src: url("/public/fonts/Calibre/Calibre-Regular.ttf") format("truetype"),
+    src: url("/public/fonts/Calibre/Calibre-Regular.ttf") format("ttf"),
         url("/public/fonts/Calibre/Calibre-Regular.woff") format("woff"),
         url("/public/fonts/Calibre/Calibre-Regular.woff2") format("woff2");
 }
 @font-face {
     font-family: "Calibre-bold";
-    src: url("/public/fonts/Calibre/Calibre-Semibold.ttf") format("truetype"),
+    src: url("/public/fonts/Calibre/Calibre-Semibold.ttf") format("ttf"),
         url("/public/fonts/Calibre/Calibre-Semibold.woff") format("woff"),
         url("/public/fonts/Calibre/Calibre-Semibold.woff2") format("woff2");
 }
 @font-face {
     font-family: "SF Mono";
-    src: url("/public/fonts/SFMono/SFMono-Regular.ttf") format("truetype"),
+    src: url("/public/fonts/SFMono/SFMono-Regular.ttf") format("ttf"),
         url("/public/fonts/SFMono/SFMono-Regular.woff") format("woff"),
         url("/public/fonts/SFMono/SFMono-Regular.woff2") format("woff2");
 }
@@ -94,7 +94,7 @@ body {
     z-index: 999;
     width: 100%;
     height: 100px;
-    transition: all 1s;
+    transition: all 0.4s;
     &.hidden {
         top: -100%;
         transition: all 0.6s;
@@ -102,7 +102,7 @@ body {
     &.show {
         top: 0;
         height: 70px;
-        transition: all 1s;
+        transition: all 0.7s;
         box-shadow: -10px 0px 30px -15px var(--sides);
     }
 }
@@ -447,7 +447,7 @@ footer {
         &.show {
             top: 0;
             height: 60px;
-            transition: all 1s;
+            transition: all 0.7s;
         }
     }
 }
@@ -530,6 +530,7 @@ footer {
         height: 27px;
         border: none;
         background: none;
+        content: "";
     }
 
     .bar,
@@ -565,7 +566,7 @@ footer {
         filter: blur(3px);
         transition: all 0.2s;
         pointer-events: none;
-        --webkit-user-select: none;
+        -webkit-user-select: none;
         user-select: none;
     }
 
