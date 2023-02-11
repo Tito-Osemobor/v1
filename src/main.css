@@ -11924,7 +11924,7 @@ main .intro {
 main .intro div h2, main .intro div .h2 {
   font-size: clamp(var(--fz-md), 5vw, var(--fz-lg));
   font-family: var(--font-mono);
-  font-weight: 500;
+  font-weight: bolder;
   margin-bottom: 0;
   color: var(--co-main);
 }
