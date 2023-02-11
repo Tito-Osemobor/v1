@@ -11816,7 +11816,7 @@ body {
 .primary-header.show {
   top: 0;
   height: 70px;
-  transition: all 0.7s;
+  transition: all 0.5s;
   box-shadow: -10px 0px 30px -15px var(--sides);
 }
 
@@ -11954,6 +11954,13 @@ main .intro div .email-link:hover {
 }
 main .typed-cursor {
   color: var(--co-main);
+}
+main .about div .image-wrapper {
+  max-width: 300px;
+}
+main .about div .image-wrapper .image-container img {
+  width: 100%;
+  height: auto;
 }
 main .projects .project-container {
   margin-top: 3px;
@@ -12127,7 +12134,7 @@ footer div a:hover div {
   .primary-header.show {
     top: 0;
     height: 60px;
-    transition: all 0.7s;
+    transition: all 0.5s;
   }
 }
 @media (max-width: 768px) {
@@ -12249,6 +12256,14 @@ footer div a:hover div {
   .project-container div .project-card .card-button {
     transform: translateY(-40%);
     opacity: 1;
+  }
+  main .about div .image-wrapper {
+    width: 70%;
+    margin: 50px auto 0px auto;
+  }
+  main .about div .image-wrapper .image-container img {
+    width: 100%;
+    height: auto;
   }
   main .contact {
     margin-bottom: 50px;
