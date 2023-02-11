@@ -11729,6 +11729,10 @@ textarea.form-control-lg {
   src: url("/public/fonts/Calibre/Calibre-Regular.ttf") format("ttf"), url("/public/fonts/Calibre/Calibre-Regular.woff") format("woff"), url("/public/fonts/Calibre/Calibre-Regular.woff2") format("woff2");
 }
 @font-face {
+  font-family: "Calibre-medium";
+  src: url("/public/fonts/Calibre/Calibre-Medium.ttf") format("ttf"), url("/public/fonts/Calibre/Calibre-Medium.woff") format("woff"), url("/public/fonts/Calibre/Calibre-Medium.woff2") format("woff2");
+}
+@font-face {
   font-family: "Calibre-bold";
   src: url("/public/fonts/Calibre/Calibre-Semibold.ttf") format("ttf"), url("/public/fonts/Calibre/Calibre-Semibold.woff") format("woff"), url("/public/fonts/Calibre/Calibre-Semibold.woff2") format("woff2");
 }
@@ -11746,6 +11750,7 @@ textarea.form-control-lg {
 :root {
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text",
       -apple-system, system-ui, sans-serif;
+  --font-sans-medium: "Calibre-medium";
   --font-sans-bold: "Calibre-bold";
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --fz-xxs: 12px;
@@ -11797,10 +11802,11 @@ body {
 .inline {
   text-decoration: none;
   color: var(--co-main);
-  font-family: var(--font-sans-bold);
+  font-family: var(--font-sans-medium);
 }
 .inline.link {
   cursor: pointer;
+  font-family: var(--font-sans-bold);
 }
 
 .nav-toggle {
