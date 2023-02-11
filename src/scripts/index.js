@@ -1,6 +1,24 @@
+const primaryHeader = document.querySelector(".primary-header");
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".nav-toggle");
 const navLink = document.querySelectorAll(".nav-links");
+
+var prevScrollPos = window.pageYOffset;
+var threshold = window.innerWidth > 768 ? 30:50;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos && currentScrollPos > threshold) {
+    primaryHeader.classList.remove("hidden");
+    primaryHeader.classList.add("show");
+  } else if (prevScrollPos < currentScrollPos && currentScrollPos > threshold) {
+    primaryHeader.classList.remove("show");
+    primaryHeader.classList.add("hidden");
+  } else {
+    primaryHeader.classList.remove("show");
+    primaryHeader.classList.remove("hidden");
+  }
+  prevScrollPos = currentScrollPos;
+}
 
 const navSlide = () => {
     navToggle.addEventListener("click", () => {
@@ -49,6 +67,13 @@ navLink.forEach(function (link) {
         document.querySelector("main").classList.remove("blur");
         document.querySelector("main").style.pointerEvents = "auto";
     });
+});
+
+var typed = new Typed(".typing", {
+    strings: ["Student.", "Learner.", "Developer."],
+    typeSpeed: 80,
+    backSpeed: 80,
+    loop: true,
 });
 
 
