@@ -11794,6 +11794,15 @@ body {
   transition: all 0.15s ease-in-out;
 }
 
+.inline {
+  text-decoration: none;
+  color: var(--co-main);
+  font-family: var(--font-sans-bold);
+}
+.inline.link {
+  cursor: pointer;
+}
+
 .nav-toggle {
   display: none;
 }
@@ -11944,6 +11953,7 @@ main .intro div p .highlight {
 main .intro div .email-link {
   padding: 15px 30px;
   font-family: var(--font-mono);
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
   color: var(--co-main);

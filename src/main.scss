@@ -81,6 +81,15 @@ body {
     }
 }
 
+.inline {
+    text-decoration: none;
+    color: var(--co-main);
+    font-family: var(--font-sans-bold);
+    &.link {
+        cursor: pointer;
+    }
+}
+
 .nav-toggle {
     display: none;
 }
@@ -233,6 +242,7 @@ main {
             .email-link {
                 padding: 15px 30px;
                 font-family: var(--font-mono);
+                font-weight: bold;
                 transition: all 0.3s ease-in-out;
                 white-space: nowrap;
                 color: var(--co-main);
