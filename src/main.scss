@@ -94,15 +94,15 @@ body {
     z-index: 999;
     width: 100%;
     height: 100px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s;
     &.hidden {
         top: -100%;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.6s;
     }
     &.show {
         top: 0;
         height: 70px;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.6s;
         box-shadow: -10px 0px 30px -15px var(--sides);
     }
 }
