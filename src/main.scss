@@ -442,6 +442,16 @@ footer {
     }
 }
 
+@media (max-width: 501px) {
+    .primary-header {
+        &.show {
+            top: 0;
+            height: 60px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .sidebar {
         display: none;
@@ -453,14 +463,6 @@ footer {
 
     nav {
         text-align: center;
-    }
-
-    .primary-header {
-        &.show {
-            top: 0;
-            height: 60px;
-            transition: all 0.3s ease-in-out;
-        }
     }
 
     .primary-navigation {
