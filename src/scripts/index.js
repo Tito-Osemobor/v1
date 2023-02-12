@@ -61,6 +61,10 @@ window.addEventListener("touchstart", function (event) {
 
 navLink.forEach(function (link) {
     link.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior : "smooth"
+        });
         navToggle.classList.remove("is-active");
         primaryNav.classList.remove("is-active");
         document.body.classList.remove("overflow-hidden");
