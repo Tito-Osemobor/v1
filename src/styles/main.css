@@ -12280,11 +12280,26 @@ footer div a:hover div {
     transform: translateY(-40%);
     opacity: 1;
   }
-  main .about div .image-wrapper {
-    width: 70%;
-    margin: 50px auto 0px auto;
+  main .about .about-wrapper {
+    display: flex;
   }
-  main .about div .image-wrapper .image-container img {
+  main .about .about-wrapper .about-content {
+    flex: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  main .about .about-wrapper .image-wrapper {
+    flex: 100%;
+    margin: 20px auto 0 auto;
+  }
+  main .about .about-wrapper .image-wrapper .image-div {
+    width: 70%;
+    margin: 0 auto;
+  }
+  main .about .about-wrapper .image-wrapper .image-div .image-container {
+    margin: 0 auto;
+  }
+  main .about .about-wrapper .image-wrapper .image-div .image-container img {
     width: 100%;
     height: auto;
   }
@@ -12368,6 +12383,15 @@ footer div a:hover div {
   main section {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  main .about .about-wrapper {
+    display: flex;
+  }
+  main .about .about-wrapper .about-content {
+    flex: 55%;
+  }
+  main .about .about-wrapper .image-wrapper {
+    flex: 45%;
   }
   main .contact {
     margin-bottom: 100px;

@@ -630,14 +630,25 @@ footer {
 
     main {
         .about {
-            div {
+            .about-wrapper {
+                display: flex;
+                .about-content {
+                    flex: 100%;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
                 .image-wrapper {
+                    flex: 100%;
+                    margin: 20px auto 0 auto;
+                    .image-div {
                     width: 70%;
-                    margin: 50px auto 0px auto;
-                    .image-container {
-                        img {
-                            width: 100%;
-                            height: auto;
+                    margin: 0 auto;
+                        .image-container {
+                            margin: 0 auto;
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
                         }
                     }
                 }
@@ -738,6 +749,15 @@ footer {
         .intro {
         }
         .about {
+            .about-wrapper {
+                display: flex;
+                .about-content {
+                    flex: 55%
+                }
+                .image-wrapper {
+                    flex: 45%;
+                }
+            }
         }
         .contact {
             margin-bottom: 100px;
