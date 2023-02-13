@@ -4,21 +4,25 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLink = document.querySelectorAll(".nav-links");
 
 var prevScrollPos = window.pageYOffset;
-var threshold = window.innerWidth > 768 ? 30:50;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos && currentScrollPos > threshold) {
-    primaryHeader.classList.remove("hidden");
-    primaryHeader.classList.add("show");
-  } else if (prevScrollPos < currentScrollPos && currentScrollPos > threshold) {
-    primaryHeader.classList.remove("show");
-    primaryHeader.classList.add("hidden");
-  } else {
-    primaryHeader.classList.remove("show");
-    primaryHeader.classList.remove("hidden");
-  }
-  prevScrollPos = currentScrollPos;
-}
+var threshold = window.innerWidth > 768 ? 30 : 50;
+
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos && currentScrollPos > threshold) {
+        primaryHeader.classList.remove("hidden");
+        primaryHeader.classList.add("show");
+    } else if (
+        prevScrollPos < currentScrollPos &&
+        currentScrollPos > threshold
+    ) {
+        primaryHeader.classList.remove("show");
+        primaryHeader.classList.add("hidden");
+    } else {
+        primaryHeader.classList.remove("show");
+        primaryHeader.classList.remove("hidden");
+    }
+    prevScrollPos = currentScrollPos;
+};
 
 const navSlide = () => {
     navToggle.addEventListener("click", () => {
@@ -63,7 +67,7 @@ navLink.forEach(function (link) {
     link.addEventListener("click", function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior : "smooth"
+            behavior: "smooth",
         });
         navToggle.classList.remove("is-active");
         primaryNav.classList.remove("is-active");
@@ -79,7 +83,6 @@ var typed = new Typed(".typing", {
     backSpeed: 80,
     loop: true,
 });
-
 
 let resizeTimer;
 window.addEventListener("resize", () => {

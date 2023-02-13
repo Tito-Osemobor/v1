@@ -3,6 +3,8 @@
 
 // Include any default variable overrides here (though functions won't be available)
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+
 @font-face {
     font-family: "Calibre";
     src: url("/public/fonts/Calibre/Calibre-Regular.ttf") format("ttf"),
@@ -62,6 +64,7 @@ body {
     background-color: var(--background);
     font-family: var(--font-sans);
     line-height: 1.4;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -116,6 +119,7 @@ body {
     &.hidden {
         top: -100%;
         transition: all 0.6s;
+        height: 70px;
     }
     &.show {
         top: 0;
@@ -216,7 +220,7 @@ main {
             h2 {
                 font-size: clamp(var(--fz-md), 5vw, var(--fz-lg));
                 font-family: var(--font-mono);
-                font-weight: bolder;
+                font-weight: bold;
                 margin-bottom: 0;
                 color: var(--co-main);
             }
@@ -584,6 +588,7 @@ footer {
         margin: 5.5px 0;
         border-radius: 15px;
         transition: 0.2s;
+
     }
     .bar {
         width: 30px;
