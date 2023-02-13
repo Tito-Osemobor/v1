@@ -16,9 +16,15 @@
             type="image/x-icon"
         />
         <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
+        <link rel="stylesheet" href="/src/styles/aos.css" />
         <link rel="stylesheet" href="/src/styles/loader.css" />
         <link rel="stylesheet" href="/src/styles/main.css" />
+        <style>
+            body[data-aos-duration="4000"] [data-aos],
+            [data-aos][data-aos][data-aos-duration="4000"] {
+                transition-duration: 4000ms;
+            }
+        </style>
     </head>
     <body>
         <div class="loader-wrapper">
@@ -226,7 +232,7 @@
                             viewBox="0 0 2000 1247"
                             class="logo"
                             data-aos="fade-down"
-                            data-aos-delay="100"
+                            data-aos-delay="4700"
                             data-aos-once="true"
                         >
                             <g
@@ -1060,7 +1066,7 @@
                 </div>
             </footer>
         </div>
-        <script src="/node_modules/aos/dist/aos.js"></script>
+        <script src="/src/scripts/aos.js"></script>
         <script>
             AOS.init();
         </script>
