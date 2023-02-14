@@ -1,10 +1,12 @@
 const loader = document.querySelector(".loader-wrapper");
 
 setTimeout(function () {
-    // loader.style.display = "none";
-    // document.body.style.overflowY = "scroll";
     AOS.init();
 }, 4000);
+
+setTimeout(function () {
+    document.body.classList.remove("overflow-hidden");
+}, 4200);
 
 var fadeInInterval, fadeOutInterval;
 
