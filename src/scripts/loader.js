@@ -1,9 +1,10 @@
 // const loader = document.querySelector(".loader-wrapper");
-// const content = document.querySelector(".content");
+const content = document.querySelector(".content");
+const logo = document.querySelector(".logo");
 // const brick = document.querySelector(".hex-brick");
 
-// setTimeout(function () {
-//     loader.style.display = "none";
-//     document.body.classList.remove("overflow-hidden");
-// }, 3000);
+setTimeout(function () {
+    logo.style.visibility = "visible";
+    document.body.classList.remove("overflow-hidden");
+}, 1000);
 
