@@ -11872,12 +11872,12 @@ body {
   padding: 9px 14px;
   border: solid 2px var(--co-main);
   border-radius: 6px;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   font-weight: 500;
 }
 .primary-navigation .resume-link a:hover {
   background-color: var(--co-main-hover);
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 main {
@@ -11962,14 +11962,14 @@ main .intro div .email-link {
   padding: 15px 30px;
   font-family: var(--font-mono);
   font-weight: bold;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   white-space: nowrap;
   color: var(--co-main);
   border: var(--co-main) solid 2px;
 }
 main .intro div .email-link:hover {
   background-color: var(--co-main-hover);
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 main .typed-cursor {
   color: var(--co-main);
@@ -12013,20 +12013,34 @@ main .projects .project-container div .project-card .project-content .text-body 
   color: rgb(134, 134, 134);
 }
 main .projects .project-container div .project-card .card-button {
-  transform: translateY(20%);
   text-align: center;
   color: #fff;
+  position: relative;
+  height: 40px;
+}
+main .projects .project-container div .project-card .card-button .project-pointer {
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+}
+main .projects .project-container div .project-card .card-button .project-links svg {
+  transform: translateY(20%);
+  transition: all 0.2s ease-out;
+  opacity: 0;
+}
+main .projects .project-container div .project-card:hover {
+  border-color: var(--co-main);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-7px);
+}
+main .projects .project-container div .project-card:hover .card-button .project-pointer {
+  transform: translateY(-20%);
   opacity: 0;
   transition: all 0.2s ease-out;
 }
-main .projects .project-container div .project-card:hover {
-  border-color: #008bf8;
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-  transform: translateY(-7px);
+main .projects .project-container div .project-card:hover .card-button .project-links svg {
   transition: all 0.2s ease-in;
-}
-main .projects .project-container div .project-card:hover .card-button {
-  transform: translateY(-40%);
+  transform: translateY(0%);
   opacity: 1;
 }
 main .contact {

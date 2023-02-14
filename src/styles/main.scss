@@ -63,7 +63,6 @@ body {
     background-color: var(--background);
     font-family: var(--font-sans);
     line-height: 1.4;
-
 }
 
 ::-webkit-scrollbar {
@@ -161,12 +160,12 @@ body {
             padding: 9px 14px;
             border: solid 2px var(--co-main);
             border-radius: 6px;
-            transition: all 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out;
             font-weight: 500;
         }
         a:hover {
             background-color: var(--co-main-hover);
-            transition: all 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out;
         }
     }
 }
@@ -255,14 +254,14 @@ main {
                 padding: 15px 30px;
                 font-family: var(--font-mono);
                 font-weight: bold;
-                transition: all 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out;
                 white-space: nowrap;
                 color: var(--co-main);
                 border: var(--co-main) solid 2px;
             }
             .email-link:hover {
                 background-color: var(--co-main-hover);
-                transition: all 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out;
             }
         }
     }
@@ -324,20 +323,40 @@ main {
                         }
                     }
                     .card-button {
-                        transform: translateY(20%);
                         text-align: center;
                         color: #fff;
-                        opacity: 0;
-                        transition: all 0.2s ease-out;
+                        position: relative;
+                        height: 40px;
+                        .project-pointer {
+                            opacity: 1;
+                            position: absolute;
+                            width: 100%;
+                        }
+                        .project-links {
+                            svg {
+                                transform: translateY(20%);
+                                transition: all 0.2s ease-out;
+                                opacity: 0;
+                            }
+                        }
                     }
                     &:hover {
-                        border-color: #008bf8;
+                        border-color: var(--co-main);
                         box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
                         transform: translateY(-7px);
-                        transition: all 0.2s ease-in;
                         .card-button {
-                            transform: translateY(-40%);
-                            opacity: 1;
+                            .project-pointer {
+                                transform: translateY(-20%);
+                                opacity: 0;
+                                transition: all 0.2s ease-out;
+                            }
+                            .project-links {
+                                svg {
+                                    transition: all 0.2s ease-in;
+                                    transform: translateY(0%);
+                                    opacity: 1;
+                                }
+                            }
                         }
                     }
                 }

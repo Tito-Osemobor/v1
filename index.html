@@ -16,7 +16,7 @@
             type="image/x-icon"
         />
         <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="/src/styles/animate.min.css">
+        <link rel="stylesheet" href="/src/styles/animate.min.css" />
         <link rel="stylesheet" href="/src/styles/aos.css" />
         <link rel="stylesheet" href="/src/styles/loader.css" />
         <link rel="stylesheet" href="/src/styles/main.css" />
@@ -535,6 +535,7 @@
                             data-aos="fade-up"
                             data-aos-delay="650"
                             data-aos-once="true"
+                            class=""
                         >
                             Hi, my name is
                         </h2>
@@ -653,6 +654,61 @@
                     data-aos-once="true"
                 >
                     <h2 class="section-header">Experience</h2>
+                    <div class="row">
+                        <div class="col-4">
+                            <div
+                                id="simple-list-example"
+                                class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center"
+                            >
+                                <a
+                                    class="p-1 rounded"
+                                    href="#simple-list-item-1"
+                                    >Item 1</a
+                                >
+                                <a
+                                    class="p-1 rounded"
+                                    href="#simple-list-item-2"
+                                    >Item 2</a
+                                >
+                                <a
+                                    class="p-1 rounded"
+                                    href="#simple-list-item-3"
+                                    >Item 3</a
+                                >
+                                <a
+                                    class="p-1 rounded"
+                                    href="#simple-list-item-4"
+                                    >Item 4</a
+                                >
+                                <a
+                                    class="p-1 rounded"
+                                    href="#simple-list-item-5"
+                                    >Item 5</a
+                                >
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div
+                                data-bs-spy="scroll"
+                                data-bs-target="#simple-list-example"
+                                data-bs-offset="0"
+                                data-bs-smooth-scroll="true"
+                                class="scrollspy-example"
+                                tabindex="0"
+                            >
+                                <h4 id="simple-list-item-1">Item 1</h4>
+                                <p>...</p>
+                                <h4 id="simple-list-item-2">Item 2</h4>
+                                <p>...</p>
+                                <h4 id="simple-list-item-3">Item 3</h4>
+                                <p>...</p>
+                                <h4 id="simple-list-item-4">Item 4</h4>
+                                <p>...</p>
+                                <h4 id="simple-list-item-5">Item 5</h4>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section
                     id="Projects"
@@ -677,10 +733,16 @@
                                     </p>
                                 </div>
                                 <div class="card-button">
+                                    <div class="project-pointer animate__animated animate__heartBeat animate__infinite">
+                                        <img
+                                            src="/public/pointer-svgrepo-com.svg"
+                                            style="height: 24px; width: 24px"
+                                        />
+                                    </div>
                                     <a
                                         href="https://github.com/Tito-Osemobor"
                                         target="_blank"
-                                        class="text-decoration-none"
+                                        class="text-decoration-none project-links"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -697,7 +759,7 @@
                                     </a>
                                     <a
                                         href="https://linkedin.com/tito-osemobor"
-                                        class="ms-2 text-decoration-none"
+                                        class="ms-2 text-decoration-none project-links"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -728,10 +790,16 @@
                                     </p>
                                 </div>
                                 <div class="card-button">
+                                    <div class="project-pointer animate__animated animate__heartBeat animate__infinite">
+                                        <img
+                                            src="/public/pointer-svgrepo-com.svg"
+                                            style="height: 24px; width: 24px"
+                                        />
+                                    </div>
                                     <a
                                         href="https://github.com/Tito-Osemobor"
                                         target="_blank"
-                                        class="text-decoration-none"
+                                        class="text-decoration-none project-links"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -748,7 +816,7 @@
                                     </a>
                                     <a
                                         href="https://linkedin.com/tito-osemobor"
-                                        class="ms-2 text-decoration-none"
+                                        class="ms-2 text-decoration-none project-links"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -779,10 +847,16 @@
                                     </p>
                                 </div>
                                 <div class="card-button">
+                                    <div class="project-pointer animate__animated animate__heartBeat animate__infinite">
+                                        <img
+                                            src="/public/pointer-svgrepo-com.svg"
+                                            style="height: 24px; width: 24px"
+                                        />
+                                    </div>
                                     <a
                                         href="https://github.com/Tito-Osemobor"
                                         target="_blank"
-                                        class="text-decoration-none"
+                                        class="text-decoration-none project-links"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -799,7 +873,7 @@
                                     </a>
                                     <a
                                         href="https://linkedin.com/tito-osemobor"
-                                        class="ms-2 text-decoration-none"
+                                        class="ms-2 text-decoration-none project-links"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -986,7 +1060,7 @@
                     >
                 </section>
             </main>
-            <footer>
+            <footer data-aos="fade-in">
                 <div>
                     <ul>
                         <li>
@@ -1062,9 +1136,7 @@
             </footer>
         </div>
         <script src="/src/scripts/aos.js"></script>
-        <script>
-            
-        </script>
+        <script></script>
         <script src="/src/scripts/loader.js"></script>
         <script src="/src/scripts/typed.js"></script>
         <script src="/src/scripts/index.js"></script>

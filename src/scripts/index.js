@@ -77,12 +77,14 @@ navLink.forEach(function (link) {
     });
 });
 
-var typed = new Typed(".typing", {
-    strings: ["Student.", "Learner.", "Developer."],
-    typeSpeed: 80,
-    backSpeed: 80,
-    loop: true,
-});
+setTimeout(function () {
+    var typed = new Typed(".typing", {
+        strings: ["Student.", "Learner.", "Developer."],
+        typeSpeed: 80,
+        backSpeed: 80,
+        loop: true,
+    });
+}, 855);
 
 let resizeTimer;
 window.addEventListener("resize", () => {
