@@ -2,7 +2,7 @@ const loader = document.querySelector(".loader-wrapper");
 
 setTimeout(function () {
     // loader.style.display = "none";
-    document.body.style.overflowY = "scroll";
+    // document.body.style.overflowY = "scroll";
     AOS.init();
 }, 4000);
 
