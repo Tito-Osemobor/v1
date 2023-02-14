@@ -11986,11 +11986,8 @@ main .about .about-wrapper .image-wrapper .image-container img {
   width: 100%;
   height: auto;
 }
-main .projects .project-container {
-  margin-top: 3px;
-  margin: 0 auto;
-}
 main .projects .project-container div .project-card {
+  position: relative;
   height: 250px;
   border-radius: 8px;
   background: #f5f5f5;
@@ -12000,28 +11997,52 @@ main .projects .project-container div .project-card {
   overflow: visible;
 }
 main .projects .project-container div .project-card .project-content {
-  height: 100%;
-  gap: 0.5em;
-  display: grid;
-  place-content: center;
+  height: 130px;
+  padding-bottom: 0;
 }
-main .projects .project-container div .project-card .project-content .text-title {
-  font-size: 1.5em;
-  font-weight: bold;
+main .projects .project-container div .project-card .project-content .project-title {
+  font-family: var(--font-sans-medium);
+  font-size: var(--fz-xxl);
+  margin-bottom: 5px;
+  text-align: center;
+  color: var(--co-main);
 }
-main .projects .project-container div .project-card .project-content .text-body {
-  color: rgb(134, 134, 134);
+main .projects .project-container div .project-card .project-content .project-body {
+  color: var(--sub-main);
+  font-family: var(--font-sans);
+  font-size: var(--fz-md);
+  line-height: 1.15;
+}
+main .projects .project-container div .project-card .project-languages {
+  font-family: var(--font-mono);
+  text-align: center;
+  height: 35px;
+  margin-bottom: 17px;
+}
+main .projects .project-container div .project-card .project-languages .language-list {
+  padding: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+main .projects .project-container div .project-card .project-languages .language-list li {
+  color: var(--sides);
+  font-size: var(--fz-xxs);
+  line-height: 1.35;
+}
+main .projects .project-container div .project-card .project-languages .language-list li:not(:last-of-type) {
+  margin-right: 12px;
 }
 main .projects .project-container div .project-card .card-button {
+  height: 27px;
+  margin-top: 0;
   text-align: center;
   color: #fff;
-  position: relative;
-  height: 40px;
 }
 main .projects .project-container div .project-card .card-button .project-pointer {
   opacity: 1;
-  position: absolute;
   width: 100%;
+  position: absolute;
 }
 main .projects .project-container div .project-card .card-button .project-links svg {
   transform: translateY(20%);
