@@ -12041,7 +12041,8 @@ main .projects .project-container div .project-card .card-button {
 }
 main .projects .project-container div .project-card .card-button .project-pointer {
   opacity: 1;
-  width: 100%;
+  right: auto;
+  left: 50%;
   position: absolute;
 }
 main .projects .project-container div .project-card .card-button .project-links svg {
@@ -12459,8 +12460,8 @@ footer div a:hover div {
 }
 @media (min-width: 1092.1px) {
   main {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   main .section-header {
     overflow-x: hidden;

@@ -352,7 +352,8 @@ main {
                         color: #fff;
                         .project-pointer {
                             opacity: 1;
-                            width: 100%;
+                            right: auto;
+                            left: 50%;
                             position: absolute;
                         }
                         .project-links {
@@ -839,8 +840,8 @@ footer {
 
 @media (min-width: 1092.1px) {
     main {
-        padding-left: 150px;
-        padding-right: 150px;
+        padding-left: 100px;
+        padding-right: 100px;
         .section-header {
             overflow-x: hidden;
             &::after {
