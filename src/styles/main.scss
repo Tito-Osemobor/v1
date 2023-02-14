@@ -340,7 +340,7 @@ main {
                             }
                         }
                     }
-                    &:hover {
+                    &:hover , &.click{
                         border-color: var(--co-main);
                         box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
                         transform: translateY(-7px);

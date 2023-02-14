@@ -12028,17 +12028,17 @@ main .projects .project-container div .project-card .card-button .project-links 
   transition: all 0.2s ease-out;
   opacity: 0;
 }
-main .projects .project-container div .project-card:hover {
+main .projects .project-container div .project-card:hover, main .projects .project-container div .project-card.click {
   border-color: var(--co-main);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-7px);
 }
-main .projects .project-container div .project-card:hover .card-button .project-pointer {
+main .projects .project-container div .project-card:hover .card-button .project-pointer, main .projects .project-container div .project-card.click .card-button .project-pointer {
   transform: translateY(-20%);
   opacity: 0;
   transition: all 0.2s ease-out;
 }
-main .projects .project-container div .project-card:hover .card-button .project-links svg {
+main .projects .project-container div .project-card:hover .card-button .project-links svg, main .projects .project-container div .project-card.click .card-button .project-links svg {
   transition: all 0.2s ease-in;
   transform: translateY(0%);
   opacity: 1;
