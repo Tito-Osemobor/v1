@@ -96,6 +96,7 @@ body {
     font-family: var(--font-sans-medium);
     &.link {
         cursor: pointer;
+
         font-family: var(--font-sans-bold);
     }
 }
@@ -283,6 +284,7 @@ main {
             }
             .image-wrapper {
                 max-width: 370px;
+
                 .image-container {
                     img {
                         width: 100%;
@@ -300,65 +302,32 @@ main {
         .project-container {
             div {
                 .project-card {
-                    position: relative;
                     height: 250px;
                     border-radius: 8px;
                     background: #f5f5f5;
-                    padding: 1.8rem;
+                    padding-right: 1.5rem;
+                    padding-left: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    padding-top: 10px;
                     border: 2px solid #c3c6ce;
                     transition: all 0.2s ease-out;
                     overflow: visible;
-                    .project-content {
-                        height: 130px;
-                        padding-bottom: 0;
-                        .project-title {
-                            font-family: var(--font-sans-medium);
-                            font-size: var(--fz-xxl);
-                            margin-bottom: 5px;
-                            text-align: center;
-                            color: var(--co-main);
-                        }
-                        .project-body {
-                            color: var(--sub-main);
-                            font-family: var(--font-sans);
-                            font-size: var(--fz-md);
-                            line-height: 1.15;
-                        }
-                    }
-                    .project-languages {
-                        font-family: var(--font-mono);
-                        text-align: center;
-                        height: 35px;
-                        margin-bottom: 17px;
-                        .language-list {
-                            padding: 0;
-                            flex-wrap: wrap;
-                            list-style-type: none;
-                            margin-bottom: 0;
-                            li {
-                                color: var(--sides);
-                                font-size: var(--fz-xxs);
-                                line-height: 1.35;
-                            }
-                            li:not(:last-of-type) {
-                                margin-right: 12px;
-                            }
-                        }
-                    }
+                    position: relative;
                     .card-button {
                         height: 27px;
-                        margin-top: 0;
                         text-align: center;
                         color: #fff;
+                        width: inherit;
+                        position: relative;
                         .project-pointer {
-                            opacity: 1;
+                            position: absolute;
                             right: auto;
                             left: 50%;
-                            position: absolute;
+                            opacity: 1;
                         }
                         .project-links {
                             svg {
-                                transform: translateY(20%);
+                                transform: translateY(-20%);
                                 transition: all 0.2s ease-out;
                                 opacity: 0;
                             }
@@ -371,7 +340,7 @@ main {
                         transform: translateY(-7px);
                         .card-button {
                             .project-pointer {
-                                transform: translateY(-20%);
+                                transform: translateY(20%);
                                 opacity: 0;
                                 transition: all 0.2s ease-out;
                             }
@@ -381,6 +350,45 @@ main {
                                     transform: translateY(0%);
                                     opacity: 1;
                                 }
+                            }
+                        }
+                    }
+                    .project-content {
+                        padding-bottom: 0;
+                        margin-top: 9px;
+                        .project-title {
+                            font-family: var(--font-sans-medium);
+                            font-size: var(--fz-xxl);
+                            margin-bottom: 5px;
+                            text-align: center;
+                            color: var(--co-main);
+                            line-height: 0.8;
+                        }
+                        .project-body {
+                            text-align: center;
+                            color: var(--sub-main);
+                            font-family: var(--font-sans);
+                            font-size: var(--fz-md);
+                            line-height: 1.4;
+                        }
+                    }
+                    .project-languages {
+                        font-family: var(--font-mono);
+                        height: 35px;
+                        position: absolute;
+                        bottom: 10px;
+                        .language-list {
+                            padding: 0;
+                            flex-wrap: wrap;
+                            list-style-type: none;
+                            margin-bottom: 0;
+                            li {
+                                color: var(--sides);
+                                font-size: var(--fz-xxs);
+                                line-height: 1.35;
+                            }
+                            li:not(:last-of-type) {
+                                margin-right: 12px;
                             }
                         }
                     }
@@ -400,7 +408,6 @@ main {
             text-align: center;
             font-family: var(--font-mono);
             font-size: var(--fz-lg) !important;
-
             &::before {
                 font-size: var(--fz-sm) !important;
                 bottom: 1px !important;
@@ -665,17 +672,6 @@ footer {
         }
     }
 
-    .project-container {
-        div {
-            .project-card {
-                .card-button {
-                    transform: translateY(-40%);
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
     main {
         .about {
             .about-wrapper {
@@ -793,8 +789,6 @@ footer {
         section {
             padding-top: 100px;
             padding-bottom: 100px;
-        }
-        .intro {
         }
         .about {
             .about-wrapper {

@@ -11987,18 +11987,54 @@ main .about .about-wrapper .image-wrapper .image-container img {
   height: auto;
 }
 main .projects .project-container div .project-card {
-  position: relative;
   height: 250px;
   border-radius: 8px;
   background: #f5f5f5;
-  padding: 1.8rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 10px;
   border: 2px solid #c3c6ce;
   transition: all 0.2s ease-out;
   overflow: visible;
+  position: relative;
+}
+main .projects .project-container div .project-card .card-button {
+  height: 27px;
+  text-align: center;
+  color: #fff;
+  width: inherit;
+  position: relative;
+}
+main .projects .project-container div .project-card .card-button .project-pointer {
+  position: absolute;
+  right: auto;
+  left: 50%;
+  opacity: 1;
+}
+main .projects .project-container div .project-card .card-button .project-links svg {
+  transform: translateY(-20%);
+  transition: all 0.2s ease-out;
+  opacity: 0;
+}
+main .projects .project-container div .project-card:hover, main .projects .project-container div .project-card.click {
+  border-color: var(--co-main);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-7px);
+}
+main .projects .project-container div .project-card:hover .card-button .project-pointer, main .projects .project-container div .project-card.click .card-button .project-pointer {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+main .projects .project-container div .project-card:hover .card-button .project-links svg, main .projects .project-container div .project-card.click .card-button .project-links svg {
+  transition: all 0.2s ease-in;
+  transform: translateY(0%);
+  opacity: 1;
 }
 main .projects .project-container div .project-card .project-content {
-  height: 130px;
   padding-bottom: 0;
+  margin-top: 9px;
 }
 main .projects .project-container div .project-card .project-content .project-title {
   font-family: var(--font-sans-medium);
@@ -12006,18 +12042,20 @@ main .projects .project-container div .project-card .project-content .project-ti
   margin-bottom: 5px;
   text-align: center;
   color: var(--co-main);
+  line-height: 0.8;
 }
 main .projects .project-container div .project-card .project-content .project-body {
+  text-align: center;
   color: var(--sub-main);
   font-family: var(--font-sans);
   font-size: var(--fz-md);
-  line-height: 1.15;
+  line-height: 1.4;
 }
 main .projects .project-container div .project-card .project-languages {
   font-family: var(--font-mono);
-  text-align: center;
   height: 35px;
-  margin-bottom: 17px;
+  position: absolute;
+  bottom: 10px;
 }
 main .projects .project-container div .project-card .project-languages .language-list {
   padding: 0;
@@ -12032,38 +12070,6 @@ main .projects .project-container div .project-card .project-languages .language
 }
 main .projects .project-container div .project-card .project-languages .language-list li:not(:last-of-type) {
   margin-right: 12px;
-}
-main .projects .project-container div .project-card .card-button {
-  height: 27px;
-  margin-top: 0;
-  text-align: center;
-  color: #fff;
-}
-main .projects .project-container div .project-card .card-button .project-pointer {
-  opacity: 1;
-  right: auto;
-  left: 50%;
-  position: absolute;
-}
-main .projects .project-container div .project-card .card-button .project-links svg {
-  transform: translateY(20%);
-  transition: all 0.2s ease-out;
-  opacity: 0;
-}
-main .projects .project-container div .project-card:hover, main .projects .project-container div .project-card.click {
-  border-color: var(--co-main);
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-  transform: translateY(-7px);
-}
-main .projects .project-container div .project-card:hover .card-button .project-pointer, main .projects .project-container div .project-card.click .card-button .project-pointer {
-  transform: translateY(-20%);
-  opacity: 0;
-  transition: all 0.2s ease-out;
-}
-main .projects .project-container div .project-card:hover .card-button .project-links svg, main .projects .project-container div .project-card.click .card-button .project-links svg {
-  transition: all 0.2s ease-in;
-  transform: translateY(0%);
-  opacity: 1;
 }
 main .contact {
   text-align: center;
@@ -12313,10 +12319,6 @@ footer div a:hover div {
   }
   .section-header::after {
     width: 100%;
-  }
-  .project-container div .project-card .card-button {
-    transform: translateY(-40%);
-    opacity: 1;
   }
   main .about .about-wrapper {
     display: flex;
