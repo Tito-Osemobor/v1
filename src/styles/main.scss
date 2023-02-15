@@ -417,6 +417,7 @@ main {
                     border-radius: 5px 5px 0px 0px;
                     width: 120px;
                     height: 42px;
+                    margin: 0;
                     &.active {
                         color: var(--co-main);
                     }
@@ -449,6 +450,41 @@ main {
                 }
             }
             .details {
+                margin-top: 10px;
+                padding: 1.8rem;
+                font-family: var(--font-mono);
+                color: var(--sub-main);
+                .job-title {
+                    line-height: 1.3;
+                    font-family: var(--font-sans-medium);
+                    margin-bottom: 2px;
+                    font-size: var(--fz-xxl);
+                }
+                .range {
+                    margin-bottom: 25px;
+                    font-size: var(--fz-xs);
+                }
+                div {
+                    color: var(--sub-main);
+                    ul {
+                        padding-top: 0px;
+                        margin-top: 0px;
+                        list-style-image: initial;
+                        list-style-type: none;
+                        font-size: var(--fz-md);
+                        li {
+                            position: relative;
+                            padding-left: 30px;
+                            margin-bottom: 10px;
+                            &::before {
+                                content: "▹";
+                                position: absolute;
+                                left: 0px;
+                                color: var(--co-main);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
