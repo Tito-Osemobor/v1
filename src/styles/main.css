@@ -4,6 +4,7 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "/src/styles/animate.min.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11982,6 +11983,10 @@ main .about .about-wrapper .about-content .about-info p {
 main .about .about-wrapper .image-wrapper {
   max-width: 370px;
 }
+main .about .about-wrapper .image-wrapper .image-container {
+  border: 1px var(--co-main) solid;
+  padding: 0;
+}
 main .about .about-wrapper .image-wrapper .image-container img {
   width: 100%;
   height: auto;
@@ -12070,6 +12075,9 @@ main .projects .project-container div .project-card .project-languages .language
 }
 main .projects .project-container div .project-card .project-languages .language-list li:not(:last-of-type) {
   margin-right: 12px;
+}
+main .experience {
+  max-width: 700px;
 }
 main .contact {
   text-align: center;

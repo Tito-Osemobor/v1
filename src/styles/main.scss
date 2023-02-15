@@ -3,6 +3,7 @@
 
 // Include any default variable overrides here (though functions won't be available)
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "/src/styles/animate.min.css";
 
 @font-face {
     font-family: "Calibre";
@@ -284,8 +285,9 @@ main {
             }
             .image-wrapper {
                 max-width: 370px;
-
                 .image-container {
+                    border: 1px var(--co-main) solid;
+                    padding: 0;
                     img {
                         width: 100%;
                         height: auto;
@@ -293,9 +295,6 @@ main {
                 }
             }
         }
-    }
-
-    .experience {
     }
 
     .projects {
@@ -393,6 +392,16 @@ main {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .experience {
+        max-width: 700px;
+        .experience-content {
+            .company {
+            }
+            .details {
             }
         }
     }
@@ -708,6 +717,17 @@ footer {
                 padding: 0;
                 display: flex;
                 list-style-type: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .experience {
+        .experience-content {
+            .company {
+            }
+            .details {
             }
         }
     }
