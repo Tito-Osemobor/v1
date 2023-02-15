@@ -456,16 +456,10 @@ main {
                 color: var(--sub-main);
                 overflow-y: hidden;
                 .details-content {
-                    opacity: 0;
-                    transition: opacity 0.3s;
+                    display: none;
                     &.active {
-                        opacity: 1;
-                        transition: opacity 0.3s;
+                        display: block;
                     }
-                    &.hidden {
-                        display: none;
-                    }
-
                     .job-title {
                         line-height: 1.3;
                         font-family: var(--font-sans-medium);

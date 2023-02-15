@@ -12138,15 +12138,10 @@ main .experience .experience-content .details {
   overflow-y: hidden;
 }
 main .experience .experience-content .details .details-content {
-  opacity: 0;
-  transition: opacity 0.3s;
+  display: none;
 }
 main .experience .experience-content .details .details-content.active {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-main .experience .experience-content .details .details-content.hidden {
-  display: none;
+  display: block;
 }
 main .experience .experience-content .details .details-content .job-title {
   line-height: 1.3;

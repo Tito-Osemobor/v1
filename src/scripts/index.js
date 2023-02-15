@@ -7,7 +7,6 @@ const companyPill = document.querySelector(".company-pill");
 const company = document.querySelector(".company");
 const detailContainer = document.querySelector(".details");
 const details = document.querySelectorAll(".details-content");
-const detailHeight = document.querySelector(".details-content:first-of-type");
 
 var prevScrollPos = window.pageYOffset;
 var threshold = window.innerWidth > 768 ? 30 : 50;
@@ -30,9 +29,7 @@ window.onscroll = function () {
     prevScrollPos = currentScrollPos;
 };
 
-const oldHeight = detailHeight.offsetHeight;
-const height = oldHeight + 40;
-detailContainer.style.height = `${height}px`;
+
 
 const navSlide = () => {
     navToggle.addEventListener("click", () => {
@@ -111,11 +108,9 @@ setTimeout(() => {
 
             details.forEach((detail) => {
                 detail.classList.remove("active");
-                detail.classList.add("hidden");
             });
 
             currentDetails.classList.add("active");
-            currentDetails.classList.remove("hidden");
         });
     });
     expButtons[0].click();
@@ -123,10 +118,6 @@ setTimeout(() => {
 
 let resizeTimer;
 window.addEventListener("resize", () => {
-    const oldHeight = detailHeight.offsetHeight;
-    const height = oldHeight + 40;
-    detailContainer.style.height = `${height}px`;
-
     document.body.classList.add("resize-animation-stopper");
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
