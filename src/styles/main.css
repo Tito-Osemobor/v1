@@ -11878,12 +11878,12 @@ body.overflow-hidden {
   padding: 9px 14px;
   border: solid 2px var(--co-main);
   border-radius: 6px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out !important;
   font-weight: 500;
 }
 .primary-navigation .resume-link a:hover {
   background-color: var(--co-main-hover);
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out !important;
 }
 
 main {
@@ -12132,39 +12132,50 @@ main .experience .experience-content .company:after {
 }
 main .experience .experience-content .details {
   margin-top: 10px;
-  padding: 1.8rem;
+  padding: 20px;
   font-family: var(--font-mono);
   color: var(--sub-main);
+  overflow-y: hidden;
 }
-main .experience .experience-content .details .job-title {
+main .experience .experience-content .details .details-content {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+main .experience .experience-content .details .details-content.active {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+main .experience .experience-content .details .details-content.hidden {
+  display: none;
+}
+main .experience .experience-content .details .details-content .job-title {
   line-height: 1.3;
   font-family: var(--font-sans-medium);
   margin-bottom: 2px;
   font-size: var(--fz-xxl);
 }
-main .experience .experience-content .details .range {
+main .experience .experience-content .details .details-content .range {
   margin-bottom: 25px;
   font-size: var(--fz-xs);
 }
-main .experience .experience-content .details div {
+main .experience .experience-content .details .details-content div {
   color: var(--sub-main);
 }
-main .experience .experience-content .details div ul {
+main .experience .experience-content .details .details-content div ul {
   padding-top: 0px;
   margin-top: 0px;
   list-style-image: initial;
   list-style-type: none;
   font-size: var(--fz-md);
 }
-main .experience .experience-content .details div ul li {
+main .experience .experience-content .details .details-content div ul li {
   position: relative;
-  padding-left: 30px;
   margin-bottom: 10px;
 }
-main .experience .experience-content .details div ul li::before {
+main .experience .experience-content .details .details-content div ul li::before {
   content: "▹";
   position: absolute;
-  left: 0px;
+  left: -30px;
   color: var(--co-main);
 }
 main .contact {
