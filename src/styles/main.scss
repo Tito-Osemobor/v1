@@ -53,9 +53,11 @@
     --fz-xxl: 22px;
     --fz-heading: 32px;
     --background: #ebebeb;
+    --light-sides: #bebebe;
     --sides: #8c8c8c;
     --co-main: #2e5299;
-    --co-main-hover: #98b0e0;
+    --co-main-hover: #a4bef0;
+    --light-sub-main: #686868;
     --sub-main: #404040;
     --main: #000000;
 }
@@ -64,6 +66,9 @@ body {
     background-color: var(--background);
     font-family: var(--font-sans);
     line-height: 1.4;
+    &.overflow-hidden {
+        overflow: hidden;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -323,6 +328,7 @@ main {
                             right: auto;
                             left: 50%;
                             opacity: 1;
+                            transition: all 0.35s ease-out;
                         }
                         .project-links {
                             svg {
@@ -332,8 +338,7 @@ main {
                             }
                         }
                     }
-                    &:hover,
-                    &.click {
+                    &:hover {
                         border-color: var(--co-main);
                         box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
                         transform: translateY(-7px);
@@ -341,7 +346,7 @@ main {
                             .project-pointer {
                                 transform: translateY(20%);
                                 opacity: 0;
-                                transition: all 0.2s ease-out;
+                                transition: all 0.1s ease-out;
                             }
                             .project-links {
                                 svg {
@@ -400,6 +405,48 @@ main {
         max-width: 700px;
         .experience-content {
             .company {
+                padding: 0;
+                position: relative;
+                .buttons {
+                    font-family: var(--font-sans-bold);
+                    font-size: var(--fz-md);
+                    color: var(--sub-main);
+                    border: none;
+                    background-color: var(--background);
+                    transition: background-color 0.2s ease-in-out;
+                    border-radius: 5px 5px 0px 0px;
+                    width: 120px;
+                    height: 42px;
+                    &.active {
+                        color: var(--co-main);
+                    }
+                    &:hover {
+                        background-color: var(--co-main-hover);
+                        color: var(--co-main);
+                        transition: background-color 0.2s ease-in-out;
+                    }
+                }
+                .company-pill {
+                    content: "";
+                    position: absolute;
+                    z-index: 100;
+                    background-color: var(--co-main);
+                    border-radius: 0px 0px 5px 5px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    transition: width 0.5s ease, left 0.5s ease;
+                    height: 3px;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background-color: var(--light-sides);
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                }
             }
             .details {
             }
@@ -717,17 +764,6 @@ footer {
                 padding: 0;
                 display: flex;
                 list-style-type: none;
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    .experience {
-        .experience-content {
-            .company {
-            }
-            .details {
             }
         }
     }

@@ -2,6 +2,9 @@ const primaryHeader = document.querySelector(".primary-header");
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".nav-toggle");
 const navLink = document.querySelectorAll(".nav-links");
+const expButtons = document.querySelectorAll(".buttons");
+const companyPill = document.querySelector(".company-pill");
+const company = document.querySelector(".company");
 
 var prevScrollPos = window.pageYOffset;
 var threshold = window.innerWidth > 768 ? 30 : 50;
@@ -85,6 +88,21 @@ setTimeout(function () {
         loop: true,
     });
 }, 855);
+
+setTimeout(() => {
+    expButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            expButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+            const width = button.offsetWidth;
+            companyPill.style.width = `${width}px`;
+            const rect = button.getBoundingClientRect();
+            const offsetLeft = rect.left - company.getBoundingClientRect().left;
+            companyPill.style.left = `${offsetLeft}px`;
+        });
+    });
+    expButtons[0].click();
+}, 4250);
 
 let resizeTimer;
 window.addEventListener("resize", () => {

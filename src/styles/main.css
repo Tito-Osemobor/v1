@@ -11763,9 +11763,11 @@ textarea.form-control-lg {
   --fz-xxl: 22px;
   --fz-heading: 32px;
   --background: #ebebeb;
+  --light-sides: #bebebe;
   --sides: #8c8c8c;
   --co-main: #2e5299;
-  --co-main-hover: #98b0e0;
+  --co-main-hover: #a4bef0;
+  --light-sub-main: #686868;
   --sub-main: #404040;
   --main: #000000;
 }
@@ -11774,6 +11776,9 @@ body {
   background-color: var(--background);
   font-family: var(--font-sans);
   line-height: 1.4;
+}
+body.overflow-hidden {
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -12016,23 +12021,24 @@ main .projects .project-container div .project-card .card-button .project-pointe
   right: auto;
   left: 50%;
   opacity: 1;
+  transition: all 0.35s ease-out;
 }
 main .projects .project-container div .project-card .card-button .project-links svg {
   transform: translateY(-20%);
   transition: all 0.2s ease-out;
   opacity: 0;
 }
-main .projects .project-container div .project-card:hover, main .projects .project-container div .project-card.click {
+main .projects .project-container div .project-card:hover {
   border-color: var(--co-main);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-7px);
 }
-main .projects .project-container div .project-card:hover .card-button .project-pointer, main .projects .project-container div .project-card.click .card-button .project-pointer {
+main .projects .project-container div .project-card:hover .card-button .project-pointer {
   transform: translateY(20%);
   opacity: 0;
-  transition: all 0.2s ease-out;
+  transition: all 0.1s ease-out;
 }
-main .projects .project-container div .project-card:hover .card-button .project-links svg, main .projects .project-container div .project-card.click .card-button .project-links svg {
+main .projects .project-container div .project-card:hover .card-button .project-links svg {
   transition: all 0.2s ease-in;
   transform: translateY(0%);
   opacity: 1;
@@ -12078,6 +12084,50 @@ main .projects .project-container div .project-card .project-languages .language
 }
 main .experience {
   max-width: 700px;
+}
+main .experience .experience-content .company {
+  padding: 0;
+  position: relative;
+}
+main .experience .experience-content .company .buttons {
+  font-family: var(--font-sans-bold);
+  font-size: var(--fz-md);
+  color: var(--sub-main);
+  border: none;
+  background-color: var(--background);
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 5px 5px 0px 0px;
+  width: 120px;
+  height: 42px;
+}
+main .experience .experience-content .company .buttons.active {
+  color: var(--co-main);
+}
+main .experience .experience-content .company .buttons:hover {
+  background-color: var(--co-main-hover);
+  color: var(--co-main);
+  transition: background-color 0.2s ease-in-out;
+}
+main .experience .experience-content .company .company-pill {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  background-color: var(--co-main);
+  border-radius: 0px 0px 5px 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: width 0.5s ease, left 0.5s ease;
+  height: 3px;
+}
+main .experience .experience-content .company:after {
+  content: "";
+  position: absolute;
+  background-color: var(--light-sides);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
 }
 main .contact {
   text-align: center;
