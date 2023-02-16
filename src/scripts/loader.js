@@ -2,7 +2,7 @@ const loader = document.querySelector(".loader-wrapper");
 
 setTimeout(function () {
     AOS.init();
-}, 4000);
+}, 4100);
 
 setTimeout(function () {
     document.body.classList.remove("overflow-hidden");
