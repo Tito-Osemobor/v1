@@ -12144,6 +12144,7 @@ main .experience .experience-content .company:after {
   left: 0;
   right: 0;
   height: 3px;
+  border-radius: 0px 0px 5px 5px;
 }
 main .experience .experience-content .details {
   margin-top: 10px;
