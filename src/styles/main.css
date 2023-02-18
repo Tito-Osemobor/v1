@@ -11814,6 +11814,21 @@ body.overflow-hidden {
 .inline.link {
   cursor: pointer;
   font-family: var(--font-sans-bold);
+  position: relative;
+}
+.inline.link::after {
+  content: "";
+  position: absolute;
+  background-color: var(--co-main);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 2px;
+  transition: width 0.15s ease-in-out;
+}
+.inline.link:hover::after {
+  width: 100%;
+  transition: width 0.15s ease-in-out;
 }
 
 .nav-toggle {
