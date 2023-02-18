@@ -1,4 +1,4 @@
-div align="center">
+<div align="center">
   <img alt="Logo" src="https://raw.githubusercontent.com/Tito-Osemobor/TitoFolio/main/public/favicon_io/android-chrome-192x192.png
 </div>" width="100" />
 
