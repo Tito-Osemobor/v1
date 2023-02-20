@@ -11762,14 +11762,22 @@ textarea.form-control-lg {
   --fz-xl: 20px;
   --fz-xxl: 22px;
   --fz-heading: 32px;
-  --background: #ebebeb;
+  --background: #ecf0f9;
+  --background-dark: #0a101f;
   --light-sides: #bebebe;
+  --light-sides-dark: #131e3b;
   --sides: #8c8c8c;
+  --sides-dark: #22376a;
   --co-main: #2e5299;
+  --co-main-dark: #516a9d;
   --co-main-hover: #a4bef0;
+  --co-main-dark-hover: #101a32;
   --light-sub-main: #686868;
+  --light-sub-main-dark: #c2c2c2;
   --sub-main: #404040;
+  --sub-main-dark: #ababab;
   --main: #000000;
+  --main-dark: #ffffff;
 }
 
 body {
@@ -12014,7 +12022,7 @@ main .about .about-wrapper .image-wrapper .image-container img {
 main .projects .project-container div .project-card {
   height: 250px;
   border-radius: 8px;
-  background: #f5f5f5;
+  background: #ecf0f9;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   padding-bottom: 1.5rem;
@@ -12280,6 +12288,170 @@ footer div a:hover div {
   transition: none !important;
 }
 
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar {
+    background-color: var(--background-dark);
+  }
+  body {
+    background-color: var(--background-dark);
+  }
+  .logo path {
+    fill: var(--co-main-dark);
+  }
+  .inline {
+    color: var(--co-main-dark);
+  }
+  .primary-header {
+    background-color: var(--background-dark);
+  }
+  .primary-header.show {
+    box-shadow: -10px 0px 30px -15px #000101;
+  }
+  .primary-navigation .primary-links a {
+    color: var(--light-sub-main-dark);
+  }
+  .primary-navigation .primary-links a:before {
+    color: var(--co-main-dark);
+  }
+  .primary-navigation .resume-link a {
+    color: var(--co-main-dark);
+    border: solid 2px var(--co-main-dark);
+    transition: background-color 0.2s ease-in-out !important;
+  }
+  .primary-navigation .resume-link a:hover {
+    background-color: var(--co-main-dark-hover);
+    transition: background-color 0.2s ease-in-out !important;
+  }
+  main .section-header {
+    color: var(--main-dark);
+  }
+  main .section-header::before {
+    color: var(--co-main-dark);
+  }
+  main .section-header::after {
+    background-color: var(--co-main-dark-hover);
+  }
+  main .intro div h2, main .intro div .h2 {
+    color: var(--co-main-dark);
+  }
+  main .intro div .big-header {
+    color: var(--main-dark);
+  }
+  main .intro div .medium-header {
+    color: var(--sides);
+  }
+  main .intro div .medium-header .typing {
+    color: var(--co-main-dark);
+  }
+  main .intro div p {
+    color: var(--sub-main-dark);
+  }
+  main .intro div p .highlight {
+    color: var(--co-main-dark);
+  }
+  main .intro div .email-link {
+    transition: background-color 0.3s ease-in-out;
+    color: var(--co-main-dark);
+    border: var(--co-main-dark) solid 2px;
+  }
+  main .intro div .email-link:hover {
+    background-color: var(--co-main-dark-hover);
+    transition: background-color 0.3s ease-in-out;
+  }
+  main .typed-cursor {
+    color: var(--co-main-dark);
+  }
+  main .about .about-wrapper .about-content .about-info p {
+    color: var(--sub-main-dark);
+  }
+  main .about .about-wrapper .image-wrapper .image-container {
+    border: 1px var(--co-main-dark) solid;
+  }
+  main .projects .project-container div .project-card {
+    background: #090e1c;
+    border: 2px solid #090e1c;
+  }
+  main .projects .project-container div .project-card .card-button .project-pointer svg path {
+    fill: white;
+  }
+  main .projects .project-container div .project-card .card-button .project-links svg path {
+    fill: white;
+  }
+  main .projects .project-container div .project-card:hover {
+    border-color: var(--co-main-dark);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+  main .projects .project-container div .project-card:hover .card-button .project-pointer svg path {
+    fill: white;
+  }
+  main .projects .project-container div .project-card:hover .card-button .project-links svg path {
+    fill: white;
+  }
+  main .projects .project-container div .project-card .project-content .project-title {
+    color: var(--co-main-dark);
+  }
+  main .projects .project-container div .project-card .project-content .project-body {
+    color: var(--sub-main-dark);
+  }
+  main .projects .project-container div .project-card .project-languages .language-list li {
+    color: var(--sides-dark);
+  }
+  main .experience .experience-content .company .buttons {
+    color: var(--sub-main-dark);
+    background-color: var(--background-dark);
+  }
+  main .experience .experience-content .company .buttons.active {
+    color: var(--co-main-dark);
+  }
+  main .experience .experience-content .company .buttons:hover {
+    background-color: var(--co-main-dark-hover);
+    color: var(--co-main-dark);
+  }
+  main .experience .experience-content .company .company-pill {
+    background-color: var(--co-main-dark);
+  }
+  main .experience .experience-content .company:after {
+    background-color: var(--light-sides-dark);
+  }
+  main .experience .experience-content .details .details-content h2, main .experience .experience-content .details .details-content .h2,
+  main .experience .experience-content .details .details-content p {
+    color: var(--sub-main-dark);
+  }
+  main .experience .experience-content .details .details-content div {
+    color: var(--sub-main-dark);
+  }
+  main .experience .experience-content .details .details-content div ul li {
+    color: var(--sub-main-dark);
+  }
+  main .experience .experience-content .details .details-content div ul li::before {
+    color: var(--co-main-dark);
+  }
+  main .contact .title {
+    color: var(--co-main-dark);
+  }
+  main .contact p {
+    color: var(--sub-main-dark);
+  }
+  main .contact a {
+    color: var(--co-main-dark);
+    border: solid 2px var(--co-main-dark);
+  }
+  main .contact a:hover {
+    background-color: var(--co-main-dark-hover);
+  }
+  footer div ul li a .logo path {
+    fill: var(--sub-main-dark);
+  }
+  footer div a div {
+    color: var(--sub-main-dark);
+  }
+  footer div a:hover {
+    color: var(--co-main-dark);
+  }
+  footer div a:hover div {
+    color: var(--co-main-dark);
+  }
+}
 @media (max-width: 330px) {
   .primary-header {
     height: 80px;
@@ -12356,7 +12528,6 @@ footer div a:hover div {
     width: 100%;
     padding-top: 3px;
     padding-bottom: 20px;
-    color: var(--main);
   }
   .primary-navigation .primary-links a::before {
     display: none;
@@ -12470,6 +12641,24 @@ footer div a:hover div {
     list-style-type: none;
   }
 }
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  .primary-navigation {
+    background-color: var(--background-dark);
+    box-shadow: -10px 0px 30px -15px #000101;
+  }
+  .primary-navigation .primary-links::before {
+    color: var(--co-main-dark);
+  }
+  .primary-navigation .resume-link a {
+    color: var(--co-main-dark);
+    border: solid 2px var(--co-main-dark);
+  }
+  .bar,
+  .nav-toggle:after,
+  .nav-toggle:before {
+    background-color: var(--co-main-dark);
+  }
+}
 @media (min-width: 768.1px) {
   .sidebar {
     position: fixed;
@@ -12523,12 +12712,12 @@ footer div a:hover div {
     writing-mode: vertical-rl;
     margin-bottom: 17px;
     transform: translateY(0px);
-    transition: all 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
   .right.sidebar a:hover {
     color: var(--co-main);
     transform: translateY(-5px);
-    transition: all 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
   .sidebar-links::after,
   .right.sidebar::after {
@@ -12553,6 +12742,19 @@ footer div a:hover div {
   }
   main .contact {
     margin-bottom: 100px;
+  }
+}
+@media (min-width: 768.1px) and (prefers-color-scheme: dark) {
+  .sidebar-links li a:hover .logo {
+    transform: translateY(-5px);
+    transition: all 0.2s ease-in-out;
+  }
+  .sidebar-links li a:hover .logo path {
+    fill: var(--co-main-dark);
+    transition: all 0.2s ease-in-out;
+  }
+  .right.sidebar a:hover {
+    color: var(--co-main-dark);
   }
 }
 @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
