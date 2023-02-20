@@ -2,6 +2,7 @@ const loader = document.querySelector(".loader-wrapper");
 
 setTimeout(function () {
     AOS.init();
+    document.querySelector("footer").style.visibility = "visible";
 }, 4100);
 
 setTimeout(function () {

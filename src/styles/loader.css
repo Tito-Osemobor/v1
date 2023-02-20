@@ -2,12 +2,14 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
+footer {
+  visibility: hidden;
+}
+
 .loader-wrapper {
-  display: none;
   position: fixed;
   top: 50%;
   right: 50%;
-  background-color: #ebebeb;
 }
 
 .socket {
@@ -333,5 +335,21 @@ body.overflow-hidden {
   }
   100% {
     background: #2b4c8d;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .hex-brick {
+    background-color: var(--background-dark);
+  }
+  @keyframes fade00 {
+    0% {
+      background: #3661b5;
+    }
+    50% {
+      background: #2e5299;
+    }
+    100% {
+      background: #2b4c8d;
+    }
   }
 }
