@@ -11745,7 +11745,6 @@ textarea.form-control-lg {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: black;
 }
 
 :root {
@@ -12368,7 +12367,7 @@ footer div a:hover div {
     border: 1px var(--co-main-dark) solid;
   }
   main .projects .project-container div .project-card {
-    background: #090e1c;
+    background: #0d1427;
     border: 2px solid #090e1c;
   }
   main .projects .project-container div .project-card .card-button .project-pointer svg path {
@@ -12450,6 +12449,9 @@ footer div a:hover div {
   }
   footer div a:hover div {
     color: var(--co-main-dark);
+  }
+  meta[name=theme-color] {
+    content: var(--background-dark);
   }
 }
 @media (max-width: 330px) {

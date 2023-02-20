@@ -35,7 +35,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
 }
 
 :root {
@@ -728,7 +727,7 @@ footer {
             .project-container {
                 div {
                     .project-card {
-                        background: #090e1c;
+                        background: #0d1427;
                         border: 2px solid #090e1c;
                         .card-button {
                             .project-pointer {
@@ -872,6 +871,9 @@ footer {
             }
         }
     }
+    meta[name="theme-color"] {
+        content: var(--background-dark);
+      }
 }
 
 @media (max-width: 330px) {
