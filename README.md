@@ -14,3 +14,4 @@
 </p>
 
 ![demo](https://raw.githubusercontent.com/Tito-Osemobor/TitoFolio/main/public/assets/og-image.png)
+![demo](https://raw.githubusercontent.com/Tito-Osemobor/TitoFolio/main/public/assets/og-image-dark.png)
