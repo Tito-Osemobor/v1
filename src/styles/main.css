@@ -12451,7 +12451,7 @@ footer div a:hover div {
     color: var(--co-main-dark);
   }
   meta[name=theme-color] {
-    content: var(--background-dark);
+    content: #0a101f;
   }
 }
 @media (max-width: 330px) {
