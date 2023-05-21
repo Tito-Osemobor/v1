@@ -926,6 +926,9 @@ footer {
             transition: all 0.5s;
         }
     }
+    .long-description {
+        font-size: var(--fz-xs) !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1106,10 +1109,8 @@ footer {
             a {
                 color: var(--co-main-dark);
                 border: solid 2px var(--co-main-dark);
-
             }
         }
-        
     }
     .bar,
     .nav-toggle:after,
@@ -1117,7 +1118,6 @@ footer {
         background-color: var(--co-main-dark);
     }
 }
-
 
 @media (min-width: 768.1px) {
     .sidebar {
@@ -1231,7 +1231,6 @@ footer {
             color: var(--co-main-dark);
         }
     }
-
 }
 
 @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {

@@ -5965,8 +5965,7 @@ textarea.form-control-lg {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -12494,6 +12493,9 @@ footer div a:hover div {
     top: 0;
     height: 60px;
     transition: all 0.5s;
+  }
+  .long-description {
+    font-size: var(--fz-xs) !important;
   }
 }
 @media (max-width: 768px) {
