@@ -203,7 +203,13 @@ main {
     min-height: 100vh;
     margin: 0 auto;
     counter-reset: section;
-
+    &.blur {
+        filter: blur(3px);
+        transition: all 0.2s;
+        pointer-events: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
     section {
         max-width: 1000px;
         margin: 0 auto;
@@ -1040,14 +1046,6 @@ footer {
         transform: rotate(-45deg) translate(0, -14.5px);
     }
 
-    main.blur {
-        filter: blur(3px);
-        transition: all 0.2s;
-        pointer-events: none;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-
     .section-header {
         overflow-x: hidden;
         &::after {
@@ -1120,6 +1118,7 @@ footer {
 }
 
 @media (min-width: 768.1px) {
+    
     .sidebar {
         position: fixed;
         bottom: 0;

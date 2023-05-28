@@ -11913,6 +11913,14 @@ main {
   margin: 0 auto;
   counter-reset: section;
 }
+main.blur {
+  filter: blur(3px);
+  transition: all 0.2s;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
 main section {
   max-width: 1000px;
   margin: 0 auto;
@@ -12598,14 +12606,6 @@ footer div a:hover div {
   .nav-toggle.is-active:after {
     width: 34px;
     transform: rotate(-45deg) translate(0, -14.5px);
-  }
-  main.blur {
-    filter: blur(3px);
-    transition: all 0.2s;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-         user-select: none;
   }
   .section-header {
     overflow-x: hidden;
