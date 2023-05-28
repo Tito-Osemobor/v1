@@ -29,8 +29,6 @@ window.onscroll = function () {
     prevScrollPos = currentScrollPos;
 };
 
-
-
 const navSlide = () => {
     navToggle.addEventListener("click", () => {
         navToggle.classList.toggle("is-active");
@@ -74,7 +72,6 @@ navLink.forEach(function (link) {
         primaryNav.classList.remove("is-active");
         document.body.classList.remove("overflow-hidden");
         document.querySelector("main").classList.remove("blur");
-        document.querySelector("main").style.pointerEvents = "auto";
     });
 });
 
