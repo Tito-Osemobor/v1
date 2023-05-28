@@ -37,10 +37,6 @@ const navSlide = () => {
         primaryNav.classList.toggle("is-active");
         document.body.classList.toggle("overflow-hidden");
         document.querySelector("main").classList.toggle("blur");
-        document.querySelector("main").style.pointerEvents =
-            document.querySelector("main").style.pointerEvents === "none"
-                ? "auto"
-                : "none";
     });
 };
 
@@ -53,7 +49,6 @@ window.addEventListener("click", function (event) {
         primaryNav.classList.remove("is-active");
         document.body.classList.remove("overflow-hidden");
         document.querySelector("main").classList.remove("blur");
-        document.querySelector("main").style.pointerEvents = "auto";
     }
 });
 
@@ -66,7 +61,6 @@ window.addEventListener("touchstart", function (event) {
         primaryNav.classList.remove("is-active");
         document.body.classList.remove("overflow-hidden");
         document.querySelector("main").classList.remove("blur");
-        document.querySelector("main").style.pointerEvents = "auto";
     }
 });
 
