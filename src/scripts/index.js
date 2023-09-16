@@ -8,11 +8,11 @@ const company = document.querySelector(".company");
 const detailContainer = document.querySelector(".details");
 const details = document.querySelectorAll(".details-content");
 
-var prevScrollPos = window.pageYOffset;
+var prevScrollPos = window.scrollY;
 var threshold = window.innerWidth > 768 ? 30 : 50;
 
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
+window.onscroll = () => {
+    var currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos && currentScrollPos > threshold) {
         primaryHeader.classList.remove("hidden");
         primaryHeader.classList.add("show");
@@ -38,7 +38,7 @@ const navSlide = () => {
     });
 };
 
-window.addEventListener("click", function (event) {
+window.addEventListener("click", (event) => {
     if (
         !primaryNav.contains(event.target) &&
         !navToggle.contains(event.target)
@@ -50,7 +50,7 @@ window.addEventListener("click", function (event) {
     }
 });
 
-window.addEventListener("touchstart", function (event) {
+window.addEventListener("touchstart", (event) => {
     if (
         !primaryNav.contains(event.target) &&
         !navToggle.contains(event.target)
@@ -62,8 +62,8 @@ window.addEventListener("touchstart", function (event) {
     }
 });
 
-navLink.forEach(function (link) {
-    link.addEventListener("click", function (e) {
+navLink.forEach((link) => {
+    link.addEventListener("click", (e) => {
         e.preventDefault();
         document.querySelector(this.getAttribute("href")).scrollIntoView({
             behavior: "smooth",
@@ -75,7 +75,7 @@ navLink.forEach(function (link) {
     });
 });
 
-setTimeout(function () {
+setTimeout(() => {
     var typed = new Typed(".typing", {
         strings: ["Student.", "Learner.", "Developer."],
         typeSpeed: 80,
