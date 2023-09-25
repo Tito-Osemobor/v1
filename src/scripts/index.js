@@ -65,7 +65,8 @@ window.addEventListener("touchstart", (event) => {
 navLink.forEach((link) => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
+        const target = link.getAttribute("href");
+        document.querySelector(target).scrollIntoView({
             behavior: "smooth",
         });
         navToggle.classList.remove("is-active");
