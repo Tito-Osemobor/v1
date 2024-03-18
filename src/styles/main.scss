@@ -316,7 +316,7 @@ main {
                 }
             }
             .image-wrapper {
-                max-width: 370px;
+                max-width: 500px;
                 .image-container {
                     border: 1px var(--co-main) solid;
                     padding: 0;
@@ -1066,7 +1066,7 @@ footer {
                     flex: 100%;
                     margin: 20px auto 0 auto;
                     .image-div {
-                        width: 80%;
+                        width: 100%;
                         margin: 0 auto;
                         .image-container {
                             margin: 0 auto;
